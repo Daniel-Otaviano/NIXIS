@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Cadastro de fornecedores</title>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "fornecedor.css">
+    </style>
+  </head>
+  <body>
+    <form action = "/processa-fornecedor" method = "post">
+    <div class = "titulo">
+        <p>Cadastro de fornecedor</p>
+    </div>
+    <div>
+        <label for = "nome" >Nome fornecedor: </label>
+        <input type = "text" id = "nome" size="52" maxlength="40" name = "nome_fornecedor" required name = nome>
+    </div>
+    <div>
+        <label for = "cod">Cód. Fornecedor: </label>
+        <input type = "text" id = "cod" size="52" maxlength="15" name = "cod_fornecedor" required name = cod>
+    </div>
+    <div>
+        <label for = "email">E-mail: </label>
+        <input type = "email" id = "email" size="52" maxlength="40" name = "email_fornecedor" required name = email>
+    </div>
+    <div>
+        <label for = "telefone">Telefone: </label>
+        <input type = "text" id = "telefone" size = "52" maxlength = "10" name = "telefone_fornecedor" required name = telefone>
+    </div>
+    <div>
+        <label for = "endereco">Endereço: </label>
+        <input type = "text" id = "endereco" size="52" maxlength="30" name = "endereco_fornecedor" required name = endereco>
+    </div>
+    <div>
+        <label for = "cnpj">Cnpj: </label>
+        <input type = "text" id = "cnpj" size="52" maxlength="14" name = "cnpj_fornecedor" required name = cnpj>
+    </div>
+    <div class="button">
+        <button type="submit">Enviar</button>
+    </div>
+    </form>
+  </body>
+</html>
