@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>NXIS</title>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "principal.css">
+    </style>
+  </head>
+  <body>
+	    <form name="aspnetForm" method="post" action="/identificacao" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="ctl00_tsm_HiddenField" id="ctl00_tsm_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTM0MDIzNzk1Mw9kFgJmD2QWBAIBD2QWBAICD2QWCGYPFgIeBGhyZWYFP2h0dHBzOi8vd3d3LmdlbmRhaS5jb20uYnIvX2h0bWwvZ2VuZGFpL3BhZHJhby9jc3Mvc3R5bGUuY3NzP3Y9MWQCAg8WAh8ABUNodHRwczovL3d3dy5nZW5kYWkuY29tLmJyL19odG1sL2dlbmRhaS9wYWRyYW8vZm9udGVzL3N0eWxlc2hlZXQuY3NzZAIEDxYCHgRUZXh0BYoBPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIGxhbmd1YWdlPSJqYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vd3d3LmdlbmRhaS5jb20uYnIvX2h0bWwvZ2VuZGFpL3BhZHJhby9qcy9qcXVlcnktMS4xMS4yLm1pbi5qcyI+PC9zY3JpcHQ+ZAIIDxYCHwEFbDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBsYW5ndWFnZT0iamF2YXNjcmlwdCIgc3JjPSJodHRwczovL3d3dy5nZW5kYWkuY29tLmJyL2pzL1VybEJhc2UuanMiPjwvc2NyaXB0PmQCAw9kFgYCAQ8WAh8ABT9odHRwczovL3d3dy5nZW5kYWkuY29tLmJyL19odG1sL2dlbmRhaS9wYWRyYW8vY3NzL2xvZ2luLmNzcz92PTFkAgMPFgIfAAVIaHR0cHM6Ly93d3cuZ2VuZGFpLmNvbS5ici9faHRtbC9nZW5kYWkvcGFkcmFvL2Nzcy9yYWRpb19jaGVja2JveC5jc3M/dj0xZAIFDxYCHwEFkgE8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly93d3cuZ2VuZGFpLmNvbS5ici9faHRtbC9nZW5kYWkvcGFkcmFvL2pzL2pxdWVyeS5zdHlsZVJhZGlvQ2hlY2tib3guanMiPjwvc2NyaXB0PmQCAw8WAh4GYWN0aW9uBQ4vaWRlbnRpZmljYWNhbxYIAgcPZBYCAgEPZBYCZg9kFgICAQ9kFgJmDxYCHwAFPmh0dHBzOi8vd3d3LmdlbmRhaS5jb20uYnIvX2h0bWwvZ2VuZGFpL3BhZHJhby9jc3MvbGlnaHRib3guY3NzZAIJDxYCHgNzcmMFSGh0dHBzOi8vd3d3LmdlbmRhaS5jb20uYnIvX2h0bWwvZ2VuZGFpL3BhZHJhby9pbWFnZW5zL2ljb25lcy9sb2FkaW5nLmdpZmQCDw9kFgICAQ9kFgJmD2QWAgIBD2QWDgIBDxYCHgdWaXNpYmxlaGQCAw8PZBYCHgVzdHlsZQUMZGlzcGxheTpub25lZAIEDw9kFgIfBQUMZGlzcGxheTpub25lZAIFDxYCHwAFJ2h0dHBzOi8vd3d3LmdlbmRhaS5jb20uYnIvaWRlbnRpZmljYWNhb2QCBg9kFgJmDxYCHglpbm5lcmh0bWwFATBkAgcPD2QWAh4Jb25rZXlkb3duBa8BaWYoZXZlbnQud2hpY2ggfHwgZXZlbnQua2V5Q29kZSl7aWYgKChldmVudC53aGljaCA9PSAxMykgfHwgKGV2ZW50LmtleUNvZGUgPT0gMTMpKSB7IF9fZG9Qb3N0QmFjaygnY3RsMDAkY2FiZWNhbGhvJEhlYWRlcjEkbG5rQnVzY2FyJywnJyk7IHJldHVybiBmYWxzZTt9fSBlbHNlIHtyZXR1cm4gdHJ1ZX07IGQCDA8WAh8EaBYCAgEPFgIfAQUBMGQCEQ9kFgRmD2QWAmYPZBYEZg8PZBYCHwcF0QFpZihldmVudC53aGljaCB8fCBldmVudC5rZXlDb2RlKXtpZiAoKGV2ZW50LndoaWNoID09IDEzKSB8fCAoZXZlbnQua2V5Q29kZSA9PSAxMykpe3dpbmRvdy5sb2NhdGlvbi5ocmVmID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2N0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfbGtFbnRyYXInKS5ocmVmO3JldHVybiBmYWxzZTt9fSBlbHNlIHtyZXR1cm4gdHJ1ZX07IGQCAQ8PZBYCHwcF0gFpZihldmVudC53aGljaCB8fCBldmVudC5rZXlDb2RlKXtpZiAoKGV2ZW50LndoaWNoID09IDEzKSB8fCAoZXZlbnQua2V5Q29kZSA9PSAxMykpIHt3aW5kb3cubG9jYXRpb24uaHJlZiA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX2xrRW50cmFyJykuaHJlZjtyZXR1cm4gZmFsc2U7fX0gZWxzZSB7cmV0dXJuIHRydWV9OyBkAgEPZBYCZg9kFgICAQ8PFgIeCEltYWdlVXJsBUhodHRwczovL3d3dy5nZW5kYWkuY29tLmJyL19odG1sL2dlbmRhaS9wYWRyYW8vaW1hZ2Vucy9pY29uZXMvbG9hZGluZy5naWZkZGRdM7qSBfwYjJVlzArc3sfaeLfLQ7XrHPLGWozRXz4+/Q==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=G3OLJjHAU7Vi76qvVz11IvFm24esPGUS5ZZNqVXPK2tYx7cNyynESQduwWCH37L6IwBeRl1ZFHgTtTQeXTzaXtL_qmZEbue5555ZvOVd3D81&amp;t=636765208020000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=T5jwzJ2rsqzgpVhOSYEEeoa9T7GJJ04q9LgyHv5y7MBp0x5D5NKDHYFVRwu1_Hx5g3q-j2kw1a30GOyPOJ8TOI7VfDsq3umJjR1RLjw9ICI7sHhLMyAXauHBhnX-Bw5o_Q23crWo3q6KpbyaIJQn0A2&amp;t=2939b118" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=fW0OoWN2M5D15BUXTpRDg6FB-kxoHa1tjoQpU8-Fgfz4fwWGKJiRkyZe4XFzUzFzZ6LZ0lzZg7hX8gZUuHaV4fqyikM83mcXBWEnpo5qnIpXgr4fusaHdE7puR6MImYEoe4t1UUSEX5qsNwXVX9sfA2&amp;t=2939b118" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=rdUCKsTOqYC9fQ358dGnDuvrS7_c42L_6ULjVtGCh2igt18kZ-w6Znr1a3xO6ZAqCW3v_v7HFrqYPs54n05WDXsu6oS4FxKNq3tVZH2iDCuFzqY_Xim9nTSd8sNVbuqV4Uly7lmzF14MYDX_jQM0rg2&amp;t=2939b118" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=1gbAr-tam_niMRWn3DLqbK31uOK8cyjJ7hmZDKscVH47pX-jYjPEmZIrFENqwa7V-l1gAgca7mVbhDtu4VrHEQO8uYiTx1VxNrWJGhuBqHayFl4W997AN8hTmL0bLjaUhvcKscRYbtWhGMriGUAGhw2&amp;t=2939b118" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=2kjgA9JIwjYmMlbwzKmD1OqHyci2no-0lTQ158XIeNhi9j7N_OX0H8-u7_xeJ9xHF0dkA0Rvgp-h5nZZVg_Yl9WoJ2IAJPe4HwM7FKyTk-NyUMOsu_7lD8kZNm_gpMOM0N1ouBXlpFJYn73z3qBSA-kVlnU6xORqoWmBAFtMiOs1&amp;t=2939b118" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=4rKLbNpqisLzs2m6UPnHRqQDBeQxj1kM3nNAKfVWh9RD-3pZjIkhydGBqo8N7Il0Ly5wG-qh6iIoC5VG94YIeCN-fQzOG9pik14zWpybHKj5X9vZngq-FoBX-X85PgOzRwdCymGIrEyxFCSAFCmfxA2&amp;t=2939b118" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=nphLR4Kp2Z7ITbUGm33uXwRVU5p-SH6TqEJApZX6am_Isca5c_hXrca-dfqPAKI2F5HG7Hrr7XUoM_XT7k9V6jhB7sJ9-2-eIXbp0-rifa1mI27RRHA7ajl6Vu_VivRTmOlKmjBePramzR9Tly1UKA2&amp;t=2939b118" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Z-yYd0WNHEtLiFC6BkLw0nihZ7wQO376KzovAequyxEjv3My-X8ga0JAZ9vBtx2k0wjwpF_cUx_WaUqq32KtQKr6qRsvifQIZgsAnOUt4OXWBxOeINaHIPlRPdVixODu5XmprxtJWdSQ2edHEj1YscV72LifDFPwV0YiL4Z3A_s1&amp;t=2939b118" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=FibF7_RkSjOib18X6PqhBW8-gb7aOXARtIbnRW9GKGdr5fYrgv03OCCxmquGWyjdBarxtzRGf5kPdRkpjSX2IxF4v8EjS1nDl-5P_9N6X7xHb00sqfW4nqVvZwn_5dRdrGC3vI9cqaUwoUQNuXhX-vmHBhO2zDzd3tsnJ5nAJl01&amp;t=2939b118" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=MmIXUPcymqt8JHiKE8qiZ9NbT6AYGhZMBKeb0X9EQhvIJ6sBVy0P2K0opKWHtRUHrDVbYHM5Ws9GVhrryuJSZwtEQzgpEoziuP_21rIe94oBU7yZKW5vL_iAi61SCOHYBnH2XxQyTzkx4NKG_Mnzs7y1xUVxUcPAImol3qjv3fA1&amp;t=2939b118" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+null;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D77FE2F2" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABB/SFqLDRBl+YFI5arZktNbypuCpZ3YN/2wAbQ32XYGEVHUXdK1a55Q+dEUXKikUx2p9G+Hbuzs1dGLQdOEz1euWYC6DCTrFEfcQ00O1+bVvPYsW2vcua+Cy/8NperOAWa5vy8UO9KOT2hgBiHZXlhjnMZVh8gTTSCmvChEfpDorvbv1ughG2Xq7FCoaKqEdszIYw0V1h5bqZdIwFpHs1VZxMLPMp1JemUp+BKUYMg9yh7ATbKYrmrMnn+OTDihrpveAvbwT0gk4W98FaJ0QS6h9oMiLC1VmJt6lNorx39HkBzmZcPS2ko42c+UNRXZGTdZQrfxx7AWXxzsohKaYiIzSxVz8gWXevkjhmTgqLHuifrUfpzcbha8wslP2mkSI4g=" />
+</div>
+    <input name="ctl00$hdnNeoname" type="hidden" id="ctl00_hdnNeoname" />
+    <input name="ctl00$hdnNeoemail" type="hidden" id="ctl00_hdnNeoemail" />
+    <script type="text/javascript">
+        var neoname = document.getElementById('ctl00_hdnNeoname').value;
+        var neoemail = document.getElementById('ctl00_hdnNeoemail').value;
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$tsm', 'aspnetForm', ['tctl00$ContentPlaceHolder2$UpdatePanel2','','tctl00$cabecalho$UpdatePanel3','','tctl00$ContentPlaceHolder1$UpdatePanel1',''], [], [], 7200, 'ctl00');
+//]]>
+</script>
+
+    
+    <div id="ctl00_ContentPlaceHolder2_UpdatePanel2">
+	
+            <link id="ctl00_ContentPlaceHolder2_uclightbox1_lnkStyle" rel="stylesheet" type="text/css" href="https://www.gendai.com.br/_html/gendai/padrao/css/lightbox.css"></link>
+<script language="javascript">
+    function FechaLightbox() {
+        $('#bglightbox').hide();
+        $('#lightboxMensagem').hide();
+    }
+    function LightBoxjs(titulo, msg) {
+        $('#p_titulo').html(titulo);
+        $('#p_tituloBloco').html(msg);
+        $('#bglightbox').show();
+        $('#lightboxMensagem').show();
+        $('#btOK').click(function () { FechaLightbox(); });
+    }
+
+    function LightBoxjsAvancado(titulo, msg, exibeCancelar, functionOK, functionCancelar) {
+
+        $("#btOK").unbind("click");
+        $("#btCancelar").unbind("click");
+        $("#btFechar").unbind("click");
+
+        if (exibeCancelar)
+            $('#lightbox_cancelar').show();
+
+        LightBoxjs(titulo, msg);
+        
+        if (functionOK != '') {
+            var fnstring2 = functionOK;
+            // find object
+            var fn2 = window[fnstring2];
+            $('#btOK').click(function () { FechaLightbox(); fn2(); });
+        } else {
+            $('#btOK').click(function () { FechaLightbox(); });
+        }
+
+
+        if (functionCancelar != '') {
+            var fnstring = functionCancelar;
+            // find object
+            var fn = window[fnstring];
+
+            $("#btFechar").click(function () { FechaLightbox(); fn(); });
+            $('#btCancelar').click(function () { FechaLightbox(); fn(); });
+
+        }
+        else {
+            $("#btFechar").click(function () { FechaLightbox(); });
+            $('#btCancelar').click(function () { FechaLightbox(); });
+        }
+
+    }
+
+</script>
+<div class="bglightbox" id="bglightbox" style="display: none">
+</div>
+<div class="lightboxMensagem" id="lightboxMensagem" style="display: none">
+    <a href="javascript:;" onclick="FechaLightbox();" class="btFechar" id="btFechar">X</a>
+    <p class="titulo" id="p_titulo">
+        
+    </p>
+    <p class="tituloBloco" id="p_tituloBloco">
+        
+    </p>
+    <div class="botoes">
+        <a href="javascript:;" class="botao" id="btOK"><strong>Ok</strong></a>
+        <span id="lightbox_cancelar" style="display:none">
+            <a href="javascript:;" id="btCancelar" class="botao"><strong>Cancelar</strong></a>
+        </span>
+    </div>
+</div>
+
+        
+</div>
+
+    <div class="loader" id="dv_loader" style="display: none;">
+        <img src="https://www.gendai.com.br/_html/gendai/padrao/imagens/icones/loading.gif" id="ctl00_imgLoading" width="32" height="32" alt="Loader" /></div>
+    <div class="bgLoader" id="dv_bgLoader" style="display: none;">
+    </div>
+    <!--Dy-->
+    <html>
+    <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N8SQR4V');</script>
+<!-- End Google Tag Manager -->
+ </head>
+ <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8SQR4V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+ </body>
+</html>
+
+
+    <!--End Dy-->
+    <input name="ctl00$urlBase_js" type="hidden" id="ctl00_urlBase_js" value="https://www.gendai.com.br/" />
+    <div class="wrapper">
+        <div class="content">
+           
+            
+    <div id="ctl00_cabecalho_UpdatePanel3">
+	
+            
+<script type="text/javascript">
+    function textoSelecionado(source, eventArgs) {
+        //alert( " Key : "+ eventArgs.get_text() +" Value : "+eventArgs.get_value());
+        document.getElementById('ctl00_cabecalho_Header1_tbBusca').value = eventArgs.get_value();
+    }
+</script>
+<style>
+    .irparacarrinho
+    {
+        margin-top: 4px;
+        color: #fff;
+        font-size: 11px;
+        padding-left: 40px;
+        display: inline-block;
+        text-decoration: none;
+    }
+    .irparacarrinho:hover
+    {
+        text-decoration: underline;
+    }
+</style>
+<div class="header" id="dv_header">
+    <script language="javascript">
+        function RedirDelivery() {
+            window.open('https://www.gendai.com.br/', '_top');
+        }
+        function RedirecionaRetirada() {
+            window.open('https://www.gendai.com.br/deliveryretiradasel', '_top');
+        }
+
+
+        function HeaderEstatico() {
+            $('#dv_header').addClass('estatica');
+        }
+        function ProdInCar(prodid) {
+            //nao apagar
+        }
+
+        function RedirecionaEnderecoNLogado() {
+            $('#spLoad').show();
+            var url = GetUrlBase() + "carrinho/LojaSessaoRemove.ashx";
+            var dados;
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: dados,
+                dataType: "text",
+                success: function (msg, status) {
+                    window.open('https://www.gendai.com.br/', '_top');
+                },
+                error: function (xhr, msg, e) {
+                }
+            });
+        }
+
+        function RedirecionaEnderecoLogado() {
+            var url = 'https://www.gendai.com.br/' + 'enderecoLoginoutrosend';
+            window.open(url, '_top');
+
+        }
+
+        function AtualziaCarQtd() {
+            var url = GetUrlBase() + "carrinho/HeaderAtualizaQtd.ashx";
+            var dados;
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: dados,
+                dataType: "text",
+                success: function (msg, status) {
+                    $('#ctl00_cabecalho_Header1_spanItensSacola').html(msg);
+                },
+                error: function (xhr, msg, e) {
+                }
+            });
+        }
+        function Entrega(tipo, prodOri, prodid, exibicao) {
+
+
+
+            if (prodOri != 0 && prodid != 0) {
+                AtualziaCarQtd();
+
+                $('#dv_' + prodOri).hide();
+                $('#li_' + prodOri).removeClass('act');
+                if (exibicao == 0) {
+
+                }
+                else {
+                    $('#ta_' + prodOri).val('');
+                }
+
+                $("#dv_meuCarrinho").show();
+                if (escolhaErroglobal = 1) {
+                    LightBoxjsAvancado("Atenção", 'produto adicionado no carrinho!', false, '', '');
+                }
+                else
+                    LightBoxjs('Atenção', 'produto adicionado no carrinho!');
+
+
+                if (exibicao == 0) {
+                    $("#dv_dadosCar_" + prodOri).show();
+                    //$("#dv_dados_" + prodOri).hide();
+                }
+                else {
+                    $("#dv_dadosCar_" + prodid).show();
+                }
+                $("#li_" + prodOri).addClass('active');
+            }
+
+            //aqui
+            PreencheResumoCompra(tipo);
+
+
+        }
+
+        function PreencheResumoCompra(tipo) {
+            var url = GetUrlBase() + "carrinho/resumocompra.ashx";
+            var dados;
+            if (tipo != -1)
+                dados = "tipoentrega=" + tipo;
+            else
+                dados = {};
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: dados,
+                beforeSend: function () { $('#spLoad').show(); },
+                dataType: "json",
+                success: function (msg, status) {
+                    $('#dv_meuCarrinho').html(msg.html);
+                    atualiza();
+                    if (tipo == 1)
+                        $("#dv_meuCarrinho .cep").show();
+                    else
+                        $("#dv_meuCarrinho .cep").hide();
+
+                    PreencheResumoCompraCabecalho(msg);
+
+                },
+                error: function (xhr, msg, e) {
+                }
+            });
+            $('#spLoad').hide();
+        }
+
+        function PreencheResumoCompraCabecalho(msg) {
+
+
+            if (msg.tipoEntrega == "1") {
+                $('#a_Retirada').hide();
+                $('#a_Delivery').show();
+
+                $('#ctl00_cabecalho_Header1_lkAlterarLoja').hide();
+                $('#ctl00_cabecalho_Header1_lkAlteraEndereco').show();
+            }
+            else {
+                $('#a_Retirada').show();
+                $('#a_Delivery').hide();
+
+                $('#ctl00_cabecalho_Header1_lkAlterarLoja').show();
+                $('#ctl00_cabecalho_Header1_lkAlteraEndereco').hide();
+            }
+
+            $('#p_enderecoResumo').html(msg.resumocabecalho);
+
+
+            if ($('#h_ehcarrinho').val() == "1") {
+                $('#spLoad').show();
+                var url = GetUrlBase() + 'carrinho';
+                window.open(url, "_top");
+            }
+        }
+
+        function Entrega1() {
+            if ($('#h_ehcarrinho').val() == "1") {
+                $('#spLoad').show();
+            }
+            Entrega(1, 0, 0);
+
+        }
+        function Entrega2() {
+            var url = GetUrlBase() + "carrinho/LojaTipoEntrega.ashx";
+            var dados;
+            dados = "tipoentrega=2";
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: dados,
+                dataType: "json",
+                beforeSend: function () { $('#spLoad').show(); },
+                complete: function () { $('#spLoad').hide(); },
+                success: function (msg, status) {
+                    if (msg.retorno == "sim") {
+
+                        if ($('#h_ehcarrinho').val() == "1") {
+                            $('#spLoad').show();
+                        }
+                        Entrega(2, 0, 0);
+                    }
+                    else {
+
+                        LightBoxjsAvancado('Atenção', msg.mensagem, true, 'Entrega2Redirect', 'Cancela2');
+
+                    }
+                },
+                error: function (xhr, msg, e) {
+                }
+            });
+
+
+
+
+        }
+
+        function Entrega2Redirect() {
+            $('#spLoad').show();
+            window.open(GetUrlBase() + 'deliveryloja', '_top');
+        }
+
+        function Cancela1() {
+
+            $("#tipo1").parent().removeClass('inputRadioChecked');
+            $("#tipo1").attr("checked", false);
+
+            $("#tipo2").parent().addClass('inputRadioChecked');
+            $("#tipo2").attr("checked", true);
+
+
+            $("#r_Delivery").parent().removeClass('inputRadioChecked');
+            $("#r_Delivery").attr("checked", false);
+
+            $("#r_Retirada").parent().addClass('inputRadioChecked');
+            $("#r_Retirada").attr("checked", true);
+        }
+        function Cancela2() {
+
+            $("#tipo2").parent().removeClass('inputRadioChecked');
+            $("#tipo2").attr("checked", false);
+
+            $("#tipo1").parent().addClass('inputRadioChecked');
+            $("#tipo1").attr("checked", true);
+
+
+            $("#r_Retirada").parent().removeClass('inputRadioChecked');
+            $("#r_Retirada").attr("checked", false);
+
+            $("#r_Delivery").parent().addClass('inputRadioChecked');
+            $("#r_Delivery").attr("checked", true);
+
+        }
+
+        function EntregaCarrinho(tipo) {
+            if (tipo == 2) {
+                LightBoxjsAvancado('Atenção', 'Ao mudar a forma de entrega o valor do pedido pode ser alterado e alguns produtos podem estar indisponíveis. Deseja continuar?', true, 'Entrega2', 'Cancela2');
+                //                window.open(GetUrlBase() + 'deliveryretiradasel', '_top');
+            }
+            else {
+                LightBoxjsAvancado('Atenção', 'Ao mudar a forma de entrega o valor do pedido pode ser alterado e alguns produtos podem estar indisponíveis. Deseja continuar?', true, 'Entrega1', 'Cancela1');
+                //                window.open(GetUrlBase() + 'deliverysel', '_top');
+            }
+        }
+        jQuery(document).ready(function (e) {
+            jQuery('.menu-bar nav > ul').css('max-height', jQuery(window).height() - jQuery('.header').height());
+            jQuery('.box-listagem-produtos .tituloCat').click(function () {
+                jQuery(this).toggleClass('act').next('ul').slideToggle();
+            });
+            jQuery(".header").removeClass("act").parent().css("padding-top", jQuery(".header").height());
+
+            var posBox = 0;
+            if (jQuery('.carrinho-fixo').offset() != null)
+                 posBox = jQuery('.carrinho-fixo').offset().top;
+
+            var definirPosicao = false;
+            var headerHeight = jQuery(".header").height() - 30;
+            var bannerTopoHeight = jQuery(".bannerTopo").height();
+            //var scrollLimmit = jQuery(document).height() - (jQuery(".footer .boxNavegacao").height() + jQuery(".footer > box980").height() + (jQuery(".box-carrinho").height() * 2) + posBox);
+            //var scrollLimmit = jQuery(document).height() - (jQuery(window).height() + jQuery(".box-carrinho").height() + headerHeight + bannerTopoHeight + 150);
+
+            //var lastChildPosition = jQuery(".box-listagem-produtos").height() - (jQuery(".box-listagem-produtos").offset().top + posBox + jQuery(".box-carrinho").height());
+            var lastChildPosition = "";
+            var scrollLimmit = "";
+            var boxCarrinhoHeight = "";
+            jQuery(window).scroll(function (e) {
+                if (jQuery(window).scrollTop() > jQuery(".header").height()) {
+                    jQuery(".header").addClass("act");
+                } else {
+                    jQuery(".header").removeClass("act");
+                }
+                if (jQuery(".box-listagem-produtos").val() != null)
+                    lastChildPosition = jQuery(".box-listagem-produtos").height() + jQuery(".box-listagem-produtos").offset().top - (jQuery(".box-carrinho").height() + 150);
+                scrollLimmit = lastChildPosition;
+                //console.log(jQuery(window).scrollTop());
+                // && jQuery(window).height() < scrollLimmit - 200
+                if (jQuery(window).scrollTop() > posBox - headerHeight && jQuery(window).scrollTop() < scrollLimmit) {
+                    jQuery(".box-carrinho").css({ 'position': 'fixed', 'right': 0, 'left': jQuery('.box-carrinho').offset().left, 'top': jQuery(".header").height() + 30, 'max-height': 'calc(100% - 200px)', 'min-height': 'inherit' }).addClass('act');
+                    boxCarrinhoHeight = jQuery(".box-carrinho").height();
+                    definirPosicao = true;
+                } else if (jQuery(window).scrollTop() >= scrollLimmit) {
+                    if (definirPosicao) {
+                        //posicaoTop = jQuery('.box-carrinho').offset().top - jQuery(".carrinho-fixo").offset().top;
+                        posicaoTop = scrollLimmit - (50 + bannerTopoHeight);
+                        jQuery(".box-carrinho").css({ 'position': 'absolute', 'right': 0, 'left': 'inherit', 'top': posicaoTop, 'max-height': 'calc(100% - 200px)', 'min-height': boxCarrinhoHeight }).addClass('act');
+                    }
+                    definirPosicao = false;
+                    //console.log("if 2");
+                } else {
+                    jQuery(".box-carrinho").css({ 'position': 'absolute', 'right': 0, 'left': 'inherit', 'top': '103px', 'max-height': 'inherit', 'min-height': 'inherit' }).removeClass('act');
+                    definirPosicao = true;
+                    //console.log("if 3");
+                }
+            });
+        });
+
+        // Find the autocompleteextender and set the text as value selected
+        function OnItemSelected(event) {
+            var selInd = $find("AutoCompleteEx")._selectIndex;
+            if (selInd != -1)
+                $find("AutoCompleteEx").get_element().value =
+          $find("AutoCompleteEx").get_completionList().childNodes[selInd]._value;
+
+            document.getElementById('ctl00_cabecalho_Header1_tbBusca').value = eventArgs.get_value();
+        }
+
+        function OnClientPopulated(sender, eventArgs) {
+            //Find the autocompleteextender list
+            var autoList = $find("AutoCompleteEx").get_completionList();
+
+            var qtdItens = autoList.childNodes.length;
+
+            //função para exibir só 5 intens, remove os demais.
+            $(autoList.childNodes).each(function () {
+                if ($(this).index() > 5) {
+                    $(this).remove();
+                }
+            });
+
+            //for (i = 0; i < autoList.childNodes.length; i++) {
+            for (i = 0; i < autoList.childNodes.length; i++) {
+                // Consider value as image path
+                var imgeUrl = autoList.childNodes[i]._value;
+                //First node will have the text
+                var text = autoList.childNodes[i].firstChild.nodeValue;
+                autoList.childNodes[i]._value = text;
+                //Height and Width of the mage can be customized here...
+                autoList.childNodes[i].innerHTML = "<img height=67 width=78 src=" + imgeUrl + " /> " + text;
+
+                if ( i  == (autoList.childNodes.length - 1) && qtdItens > 4) {        
+                    //First node will have the text
+                    var text = $('#ctl00_cabecalho_Header1_tbBusca').val();
+                    autoList.childNodes[i]._value = text;
+                    //Height and Width of the mage can be customized here...
+                    autoList.childNodes[i].innerHTML =  "<div class='vermais'>Ver Mais +</div>";
+
+                }
+
+            }        
+        }
+
+    </script>
+    <div class="box980">
+        <h1>
+            <a href="https://www.gendai.com.br/" class="logo">Gendai</a></h1>
+        <div class="box-menus">
+            <div class="row">
+                <div class="box-login">
+                    <ul>
+                        <li id="ctl00_cabecalho_Header1_li_NLogado">Olá, visitante!<br />
+                            <a href="https://www.gendai.com.br/identificacao" class="login">Entre</a>
+                            ou <a href="https://www.gendai.com.br/identificacao" class="login">Cadastre-se</a></li>
+                        
+                        <li class="endereco">
+                            <p id="p_enderecoResumo">
+                                </p>
+                            <a id="ctl00_cabecalho_Header1_lkAlteraEndereco" href="javascript:__doPostBack(&#39;ctl00$cabecalho$Header1$lkAlteraEndereco&#39;,&#39;&#39;)" style="display:none">Alterar Endereço</a>
+                            <a id="ctl00_cabecalho_Header1_lkAlterarLoja" href="javascript:__doPostBack(&#39;ctl00$cabecalho$Header1$lkAlterarLoja&#39;,&#39;&#39;)" style="display:none">Alterar Loja</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="boxMenu">
+                    <div class="alinhaMenu">
+                        <ul class="nav">
+                            <li><a href="https://www.gendai.com.br/identificacao" id="ctl00_cabecalho_Header1_a_minhaconta" class="conta"><span>Minha <span>Conta</span></span></a></li>
+                            <li><a href="https://www.gendai.com.br/meuspedidos" class="pedidos"><span>
+                                Meus <span>Pedidos</span></span></a></li>
+                            <li><a href="https://www.gendai.com.br/favoritos" class="favoritos"><span>
+                                Meus <span>Favoritos</span></span></a></li>
+                            <li><a href="https://www.gendai.com.br/lojasapresentacao" class="lojas"><span>
+                                Nossas <span>Lojas</span></span></a></li>
+                            <!--li class="first"><a href="https://www.gendai.com.br/cardapioapresentacao"
+                                class="cardapio">Cardápio</a></li-->
+                            <!--li><a href="https://www.gendai.com.br/repetirpedido" class="pedido">Repetir
+                                Pedido</a></li-->
+                            <!--li><a href="https://www.gendai.com.br/fidelidade/home" class="fidelidade">Fidelidade</a></li-->
+                            <li>
+                                <div id="ctl00_cabecalho_Header1_dv_boxCarrinho" class="boxCarrinho">
+                                    <a href="https://www.gendai.com.br/carrinho" class="carrinho"><span>Meu carrinho<br />
+                                        <span><span id="ctl00_cabecalho_Header1_spanItensSacola" class="itens">0</span> itens<span
+                                            class="arrow-menu">›</span></span></span></span></a>
+                                    <div class="meuCarrinho" id="dv_meuCarrinho" style="display: none">
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="box-busca">
+                    <input name="ctl00$cabecalho$Header1$tbBusca" type="text" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$cabecalho$Header1$tbBusca\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_cabecalho_Header1_tbBusca" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) { __doPostBack(&#39;ctl00$cabecalho$Header1$lnkBuscar&#39;,&#39;&#39;); return false;}} else {return true}; " />                    
+                    <input type="hidden" name="ctl00$cabecalho$Header1$TextBoxWatermarkExtender1_ClientState" id="ctl00_cabecalho_Header1_TextBoxWatermarkExtender1_ClientState" />
+                    
+                    <a id="ctl00_cabecalho_Header1_lnkBuscar" class="bt-busca" href="javascript:__doPostBack(&#39;ctl00$cabecalho$Header1$lnkBuscar&#39;,&#39;&#39;)">Buscar</a>
+                </div>
+                <div class="box-fidelidade">
+                    <a href="https://www.gendai.com.br/fidelidade/home" class="logo-fidelidade">
+                        <span>suas <span>vantagens</span></span><span class="arrow-menu">›</span> </a>
+                    <span id="ctl00_cabecalho_Header1_sp_f_n_fidelidade">
+                        <!--<a href="https://www.gendai.com.br/fidelidade/home"
+                        class="logo-vantagens"></a> 
+                        -->
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-bar">
+        <div class="box980">
+            <nav>
+                <a href="javascript:void(0);" class="navbar-toggle">
+                	<span class="menu-strips">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </span>
+                    <span class="sr-only">Categorias</span>
+                </a>
+            	<ul>
+                	
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<span id="spLoad" style="display: none;">
+    <div class="loader">
+        <img id="ctl00_cabecalho_Header1_imgLoading" src="_html/gendai/padrao/imagens/icones/loading.gif" style="height:32px;width:32px;border-width:0px;" />
+    </div>
+    <div class="bgLoader">
+    </div>
+</span>
+
+<script type="text/javascript">
+    function Loading() {
+        $("#spLoad").show();
+    }
+
+    $(document).ready(function () {
+        atualiza();
+
+    });
+    function atualiza() {
+        $("#dv_meuCarrinho tbody tr").hide();
+        $("#dv_meuCarrinho tbody #trVerTodos").show();
+
+        var size_li = $("#dv_meuCarrinho tbody tr").size();
+        var x = 1;
+        $('#dv_meuCarrinho tbody tr:lt(' + x + ')').show();
+    }
+
+    function car(obj) {
+        //        $("#dv_meuCarrinho tbody tr").show();
+        //        $("#dv_meuCarrinho tbody #trVerTodos").hide();
+        //        return false;
+        window.location = 'https://www.gendai.com.br/carrinho';
+    }
+</script>
+
+        
+</div>
+    <div id="ctl00_cabecalho_UpdateProgress1" style="display:none;">
+	
+            <div class="loader">
+                <img id="ctl00_cabecalho_imgLoading" src="_html/gendai/padrao/imagens/icones/loading.gif" style="height:32px;width:32px;border-width:0px;" />
+            </div>
+            <div class="bgLoader">
+            </div>
+        
+</div>
+
+            
+    <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
+	
+            
+            <script>
+
+
+                // This is called with the results from from FB.getLoginStatus().
+                function statusChangeCallback(response, cadastro) {
+                    // The response object is returned with a status field that lets the
+                    // app know the current login status of the person.
+                    // Full docs on the response object can be found in the documentation
+                    // for FB.getLoginStatus().
+                    if (response.status === 'connected') {
+                        if (response.authResponse) {
+                            $('#token').val(response.authResponse.accessToken);
+                            if (cadastro == 0)
+                                FB.api('/me?fields=id,name,gender,email', LoadValuesLogin);
+                            else
+                                FB.api('/me?fields=id,name,gender,email', LoadValuesCad);
+
+                        }
+                    } else if (response.status === 'not_authorized') {
+                        // The person is logged into Facebook, but not your app.
+
+                    } else {
+                        // The person is not logged into Facebook, so we're not sure if
+                        // they are logged into this app or not.
+                    }
+                }
+
+                // This function is called when someone finishes with the Login
+                // Button.  See the onlogin handler attached to it in the sample
+                // code below.
+                function checkLoginState() {
+                    FB.getLoginStatus(function (response) {
+                        statusChangeCallback(response, 0);
+                    });
+                }
+
+                function checkCadastroState() {
+                    FB.getLoginStatus(function (response) {
+                        statusChangeCallback(response, 1);
+                    });
+                }
+
+
+
+
+
+
+                //This method will load the values to the labels
+                function LoadValuesLogin(me) {
+                    if (me.name) {
+
+                        var url = GetUrlBase() + "handlers/loginface.ashx?nome=" + me.name + "&email=" + me.email + "&faceid=" + me.id + "&sexo=" + me.gender + "&token=" + $('#token').val();
+                        $.ajax({
+                            type: "GET",
+                            url: url,
+                            data: {},
+                            dataType: "text",
+                            beforeSend: function () { $('#spLoad').show(); },
+                            complete: function () { $('#spLoad').hide(); },
+                            success: function (msg, status) {
+                                if (msg == "ok") {
+
+
+
+                                    window.open('https://www.gendai.com.br/enderecoLoginoutrosend', '_top');
+                                }
+                                else {
+                                    alert(msg);
+                                }
+                            },
+                            error: function (xhr, msg, e) {
+
+                            }
+                        });
+
+
+
+                    }
+                }
+                function LoadValuesCad(me) {
+                    if (me.name) {
+
+                        var url = GetUrlBase() + "handlers/dadosface.ashx?nome=" + me.name + "&email=" + me.email + "&faceid=" + me.id + "&sexo=" + me.gender + "&token=" + $('#token').val();
+                        $.ajax({
+                            type: "GET",
+                            url: url,
+                            data: {},
+                            dataType: "text",
+                            beforeSend: function () { $('#spLoad').show(); },
+                            complete: function () { $('#spLoad').hide(); },
+                            success: function (msg, status) {
+                                var redirect = GetUrlBase() + 'cadastroface';
+                                console.log(redirect);
+                                window.open(redirect, '_top');
+
+                            },
+                            error: function (xhr, msg, e) {
+
+                            }
+                        });
+
+
+
+                    }
+                }
+            </script>
+            
+            <div id="fb-root">
+            </div>
+            <div class="main">
+                <div class="box_cadastroLogin">
+                    <div class="center">
+                        <div class="boxc1">
+                            <h3>
+                                Login</h3>
+                            <div class="linhaCampo">
+                                <div class="campo381">
+                                    <label for="tblogin">
+                                        Email</label>
+                                    <input name="ctl00$ContentPlaceHolder1$tblogin" type="text" id="ctl00_ContentPlaceHolder1_tblogin" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)){window.location.href = document.getElementById(&#39;ctl00_ContentPlaceHolder1_lkEntrar&#39;).href;return false;}} else {return true}; " />
+                                </div>
+                            </div>
+                            <div class="linhaCampo">
+                                <div class="campo381">
+                                    <label for="tbSenha">
+                                        Senha</label>
+                                    <input name="ctl00$ContentPlaceHolder1$tbSenha" type="password" maxlength="100" id="ctl00_ContentPlaceHolder1_tbSenha" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {window.location.href = document.getElementById(&#39;ctl00_ContentPlaceHolder1_lkEntrar&#39;).href;return false;}} else {return true}; " />
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hfSenha" id="ctl00_ContentPlaceHolder1_hfSenha" />
+                                </div>
+                                <a id="ctl00_ContentPlaceHolder1_lkEsqueciMinhaSenha" class="link" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$lkEsqueciMinhaSenha&#39;,&#39;&#39;)">Esqueci minha senha</a>
+                            </div>
+                            <a id="ctl00_ContentPlaceHolder1_lkEntrar" class="botao btEntrar" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$lkEntrar&#39;,&#39;&#39;)" style="font-weight:bold;">Entrar</a>
+                            
+                            <div class="linha-ou">
+                                ou</div>
+                            <div class="linhaCampo">
+                                <div class="box-botao-social facebook">
+                                    <div class="texto-botao">
+                                        <span class="ico"></span><span class="texto">Entrar com o Facebook</span></div>
+                                    <div class="fb-login-button facebookLogin" data-size="xlarge" autologoutlink="false"
+                                        scope="email" onlogin="checkLoginState();">
+                                        Entrar com o Facebook
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="boxc1">
+                            <h3>
+                                Cadastro</h3>
+                            <div class="linhaCampo">
+                                <a href="https://www.gendai.com.br/cadastro" class="botao cadastrar"><strong>
+                                    Cadastrar</strong></a>
+                                <!--div class="campo381">
+                                    <input name="ctl00$ContentPlaceHolder1$tbEmail" type="text" id="ctl00_ContentPlaceHolder1_tbEmail" placeholder="E-mail" />
+                                </div-->
+                            </div>
+                            <!--asp:LinkButton ID="lkCadastrar" CssClass="bt_entrar botao" OnClick="lkCadastrar_Click">Enviar</asp:LinkButton-->
+                            
+                            <div class="linha-ou">
+                                ou</div>
+                            <div class="linhaCampo">
+                                <div class="box-botao-social facebook">
+                                    <div class="texto-botao">
+                                        <span class="ico"></span><span class="texto">Cadastrar com o Facebook</span></div>
+                                    <div class="fb-login-button facebookCadastro" data-size="xlarge" autologoutlink="false"
+                                        scope="email" onlogin="checkCadastroState();">
+                                        Cadastrar com o Facebook</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+</div>
+    <div id="ctl00_ContentPlaceHolder1_upProgress" style="display:none;">
+	
+            <div class="loader">
+                <img id="ctl00_ContentPlaceHolder1_imgLoading" src="https://www.gendai.com.br/_html/gendai/padrao/imagens/icones/loading.gif" style="height:32px;width:32px;border-width:0px;" />
+            </div>
+            <div class="bgLoader">
+            </div>
+        
+</div>
+    
+    <script type="text/javascript">
+
+        function LoadFacebookJs() {
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '2183005785253931',
+                    cookie: true,  // enable cookies to allow the server to access 
+                    // the session
+                    xfbml: true,  // parse social plugins on this page
+                    version: 'v2.11' // use version 2.2
+                });
+                
+                // Now that we've initialized the JavaScript SDK, we call 
+                // FB.getLoginStatus().  This function gets the state of the
+                // person visiting this page and can return one of three states to
+                // the callback you provide.  They can be:
+                //
+                // 1. Logged into your app ('connected')
+                // 2. Logged into Facebook, but not your app ('not_authorized')
+                // 3. Not logged into Facebook and can't tell if they are logged into
+                //    your app or not.
+                //
+                // These three cases are handled in the callback function.
+
+                //            FB.getLoginStatus(function (response) {
+                //                statusChangeCallback(response);
+                //            });
+
+            };
+
+            // Load the SDK asynchronously
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            } (document, 'script', 'facebook-jssdk'));
+
+            if (typeof (FB) != 'undefined' && FB != null) {
+                FB.XFBML.parse();
+            }
+        }
+
+        function pageLoad(sender, args) {
+            LoadFacebookJs();
+           
+
+        }
+    </script>
+    
+            <div class="clear">
+            </div>
+        </div>
+        <a href="javascript:void()" onclick="javascript:$('body,html').animate({scrollTop:0},600);"
+    class="btVoltarTop" style="display: none;">Voltar ao topo</a>
+<script type="text/javascript">
+    $(document).ready(function (e) {
+        $(window).scroll(function (e) {
+            if ($(window).scrollTop() > 10) {
+                $('.btVoltarTop').show();
+            } else {
+                $('.btVoltarTop').hide();
+            }
+        });
+    });
+	jQuery(document).ready(function(){
+	jQuery('.footer .social li img').each(function(){
+		var $img = jQuery(this);
+		var imgID = $img.attr('id');
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
+
+		jQuery.get(imgURL, function(data) {
+			// Get the SVG tag, ignore the rest
+			var $svg = jQuery(data).find('svg');
+
+			// Add replaced image's ID to the new SVG
+			if(typeof imgID !== 'undefined') {
+				$svg = $svg.attr('id', imgID);
+			}
+			// Add replaced image's classes to the new SVG
+			if(typeof imgClass !== 'undefined') {
+				$svg = $svg.attr('class', imgClass+' replaced-svg');
+			}
+
+			// Remove any invalid XML tags as per http://validator.w3.org
+			$svg = $svg.removeAttr('xmlns:a');
+
+			// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+			if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+			}
+
+			// Replace image with new SVG
+			$img.replaceWith($svg);
+
+		}, 'xml');
+
+	})
+});
+</script>
+<div class="footer">
+    <div class="boxNavegacao">
+        <div class="box980">
+            <div class="col first">
+    <p class="titulo">
+        Navegue</p>
+    <ul class="">
+        <li><a href="https://www.gendai.com.br/comofunciona" target="_self">Como Funciona</a></li><li><a href="https://www.gendai.com.br/fidelidade" target="_self">Gendai VIP</a></li><li><a href="https://www.gendai.com.br/politicadeprivacidade" target="_self">Termos de uso e Privacidade</a></li>
+    </ul>
+</div>
+
+<div class="col">
+    <p class="titulo">
+        A Empresa</p>
+    <ul class="">
+        <li><a href="https://www.gendai.com.br/quemsomos" target="_self">Institucional</a></li><li><a href="https://www.gendai.com.br/faleconosco" target="_self">Fale Conosco</a></li><li><a href="http://extranet.trendfoods.com.br/site_cib/trab_g.aspx" target="_blank">Trabalhe Conosco</a></li>
+    </ul>
+</div>
+
+<div class="col">
+    <p class="titulo">
+        Franquia</p>
+    <ul class="">
+        <li><a href="http://franquiagendai.com.br/nossa-historia/" target="_blank">Saiba Mais</a></li><li><a href="https://www.gendai.com.br/sejaumfornecedor" target="_self">Seja Fornecedor</a></li><li><a href="http://franquiagendai.com.br/" target="_blank">Seja Franqueado</a></li>
+    </ul>
+</div>
+
+<div class="col">
+    <p class="titulo">
+        Baixar APP</p>
+    <ul class="">
+        <li><a href="https://play.google.com/store/apps/details?id=br.com.ecletica.smartfila.gendai" target="_blank"><img src="https://www.gendai.com.br/imagens/banner/147608a6-30f1-4c60-84be-da600db8ecd0.png" border="0"></a></li><li><a href="https://itunes.apple.com/br/app/gendai/id570699512?mt=8" target="_blank"><img src="https://www.gendai.com.br/imagens/banner/f9055f61-a785-4c2c-99f6-3c983bc0ecfe.png" border="0"></a></li>
+    </ul>
+</div>
+
+<div class="col">
+    <p class="titulo">
+        Redes Sociais</p>
+    <ul class="social">
+        <li><a href="https://www.facebook.com/gendaioficial" target="_blank"><img src="https://www.gendai.com.br/imagens/banner/17a3e87e-e651-44c6-92cf-793afd24a3f1.png" border="0"></a></li><li><a href="https://twitter.com/gendaioficial" target="_blank"><img src="https://www.gendai.com.br/imagens/banner/35873a6e-177b-49c1-84ce-d9b0ba4becb1.png" border="0"></a></li><li><a href="https://www.instagram.com/gendaioficial/" target="_blank"><img src="https://www.gendai.com.br/imagens/banner/cdb09434-b6a5-4f2b-928c-d2cb8c303824.png" border="0"></a></li>
+    </ul>
+</div>
+
+
+        </div>
+    </div>
+    <div class="box980">
+        
+        <div class="TextoLegal">
+        <p>*Imagens meramente ilustrativa.</p>
+        <p>*A Rede Gendai não aceita pedidos que não sejam efetuados por meios: telefone, internet ou diretamente em suas lojas franqueadas. Não possuímos agentes ou pessoas supostamente credenciadas para realização de pedidos em vias públicas ou fora das especificações acima.</p>
+        <p>“Consulte sobre cada um de nossos pratos. Preços válidos até Maio de 2018</p>
+        </div>
+        <p class="copyright">
+            ©2019 - Todos os direitos reservados criação e desenvolvimento - <a href="https://servico.addintelligence.com.br/contentserver/Chleba.cli/redir.aspx?idtag=bdcd9d8c-bcfe-49cc-a2e8-cc07ca290f7a"
+                target="_blank">Chleba Agência Digital</a></p>
+    </div>
+</div>
+
+    </div>
+    <input type="hidden" id="LighboxMsg_urlRedirect" value="" />
+    <img border="0" src="" width="1" height="1" id="addiImg" />
+    <img border="0" src="" width="1" height="1" id="addiImg2" />
+    <input type="hidden" id="h_mobile" value="0" />
+    <input name="ctl00$h_lojaid" type="hidden" id="ctl00_h_lojaid" value="0" />
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_cabecalho_Header1_TextBoxWatermarkExtender1_ClientState","WatermarkText":"Por favor, digite sua busca.","id":"ctl00_cabecalho_Header1_TextBoxWatermarkExtender1"}, null, null, $get("ctl00_cabecalho_Header1_tbBusca"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.AutoCompleteBehavior, {"completionInterval":100,"completionSetCount":5,"delimiterCharacters":"","enableCaching":false,"id":"AutoCompleteEx","serviceMethod":"SearchProducts","servicePath":"/AutoComplete.asmx"}, {"itemSelected":OnItemSelected,"populated":OnClientPopulated}, null, $get("ctl00_cabecalho_Header1_tbBusca"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"ctl00_cabecalho_UpdatePanel3","displayAfter":0,"dynamicLayout":true}, null, null, $get("ctl00_cabecalho_UpdateProgress1"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"ctl00_ContentPlaceHolder1_UpdatePanel1","displayAfter":0,"dynamicLayout":true}, null, null, $get("ctl00_ContentPlaceHolder1_upProgress"));
+});
+//]]>
+</script>
+</form>
+
+	
+  </body>
+</html>
