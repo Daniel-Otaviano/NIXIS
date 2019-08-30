@@ -1,16 +1,23 @@
 body{
-    background-image: url(nixis2.png);
+/*     background-image: url(nixis2.png);
     background-repeat: no-repeat;
-    background-position:  left;
+    background-position:  left; */
+    background-color: rgb(235, 235, 235);
+}
+
+h1{
+    text-align: center;
+    color:darkcyan;
+    font-size: 50px;
 }
 
 
-form{
+fieldset{
     margin: 0 auto;
     width: 400px;
     padding: 2em;
-    border: 2px solid #CCC;
-    border-radius: 1em;
+    border: 2px solid #cccccc;
+    background-color: white;
     }
 form div + div {
     margin-top: 1em;
@@ -40,14 +47,25 @@ input:focus, textarea:focus {
     }
 .button {
     /* Para posicionar os botões para a mesma posição dos campos de texto */
-    padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
+    padding-left: 85px; /* mesmo tamanho que os elementos do tipo label */
     }
 button {
     /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
     margin-left: .5em;
+    width: 200px;
+    background-color: darkcyan;
+    color: white;
+    border-radius: 1px;
     }
 .titulo{
     text-align: center;
     font-weight: bold;
     font-size: 30px;
 }
+
+legend{
+    color:black;
+}
+
+
+
