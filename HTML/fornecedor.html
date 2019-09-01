@@ -20,12 +20,6 @@
         <div>
             <label for = "nomefantasia" >Nome fantasia: </label>
             <input type = "text" id = "nomefantasia" size="52" maxlength="40" name = "nome_fantasia" required name = nome pattern="[a-z\s]+$" placeholder = "Nome completo">
-        </div>
-        <div>
-            <label for = "cod">Cód. Fornecedor: </label>
-            <input type = "text" id = "cod" size="52" maxlength="15" name = "cod_fornecedor" required name = cod pattern="[0-9]+$" placeholder = "EX: 2487827384872">
-        </div>
-        <div>
             <label for = "email">E-mail: </label>
             <input type = "email" id = "email" size="52" maxlength="40" name = "email_fornecedor" required name = email pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder = "E-mail">
         </div>
@@ -38,6 +32,8 @@
         <div>
             <label for = "endereco">Endereço: </label>
             <input type = "text" id = "endereco" size="52" maxlength="30" name = "endereco_fornecedor" required name = endereco placeholder = "Endereço completo">
+            <label for = "numero">Número: </label>
+            <input type = "text" id = "numero" size = 52 maxlenght = "5" name = "numero_fornecedor" required name = numero placeholder = "Número" pattern="[0-9]+$">
         </div>
         <div>
             <label for = "cpf">CPF: </label>
@@ -45,43 +41,44 @@
             <label for = "cnpj">CPNJ: </label>
             <input type = "text" id = "cnpj" size="52" maxlength="14" name = "cnpj_fornecedor" required name = cnpj placeholder = "Digite sem ponto" pattern="[0-9]+$">
         </div>
-        <p>ggg</p>
+        
         <div>
         <p>Estado:</p>
             <select name="estado">
             
-                <option vale = "ac">Acre</option>
-                <option vale = "al">Alagoas</option>
-                <option vale = "ap">Amapá</option>
-                <option vale = "am">Amazonas</option>
-                <option vale = "ba">Bahia</option>
-                <option vale = "cearcea">Ceará</option>
-                <option vale = "df">Distrito Federal</option>
-                <option vale = "es">Espírito Santo</option>
-                <option vale = "go">Goiás</option>
-                <option vale = "ma">Maranhão</option>
-                <option vale = "mt">Mato Grosso</option>
-                <option vale = "ms">Mato Grosso do Sul</option>
-                <option vale = "mg">Minas Gerais</option>
-                <option vale = "pa">Pará</option>
-                <option vale = "pb">Paraíba</option>
-                <option vale = "pr">Paraná</option>
-                <option vale = "pe">Pernambuco</option>
-                <option vale = "pi">Piauí</option>
-                <option vale = "rj">Rio de Janeiro</option>
-                <option vale = "rn">Rio Grande do Norte</option>
-                <option vale = "rs">Rio Grande do Sul</option>
-                <option vale = "ro">Rondônia</option>
-                <option vale = "rr">Roraima</option>
-                <option vale = "sc">Santa Catarina</option>
-                <option vale = "sp">São Paulo</option>
-                <option vale = "se">Sergipe</option>
-                <option vale = "to">Tocantins</option>
+                <option value = "ac">Acre</option>
+                <option value = "al">Alagoas</option>
+                <option value = "ap">Amapá</option>
+                <option value = "am">Amazonas</option>
+                <option value = "ba">Bahia</option>
+                <option value = "ce">Ceará</option>
+                <option value = "df">Distrito Federal</option>
+                <option value = "es">Espírito Santo</option>
+                <option value = "go">Goiás</option>
+                <option value = "ma">Maranhão</option>
+                <option value = "mt">Mato Grosso</option>
+                <option value = "ms">Mato Grosso do Sul</option>
+                <option value = "mg">Minas Gerais</option>
+                <option value = "pa">Pará</option>
+                <option value = "pb">Paraíba</option>
+                <option value = "pr">Paraná</option>
+                <option value = "pe">Pernambuco</option>
+                <option value = "pi">Piauí</option>
+                <option value = "rj">Rio de Janeiro</option>
+                <option value = "rn">Rio Grande do Norte</option>
+                <option value = "rs">Rio Grande do Sul</option>
+                <option value = "ro">Rondônia</option>
+                <option value = "rr">Roraima</option>
+                <option value = "sc">Santa Catarina</option>
+                <option value = "sp">São Paulo</option>
+                <option value = "se">Sergipe</option>
+                <option value = "to">Tocantins</option>
             </select>
-                <label for = "cidade">Cidade: </label>
-                <input type = "text" id = "cidade" size="52" maxlength="20" name = "cidade" required name = cidade placeholder = "Cidade" pattern="[a-z\s]+$">
+            <select name = "jjpok">
+                <option value = "o">ke</option>
         </div>
         </div>
+        <hr/>
         <div class="button">
             <button <a href="principal.html"></a>Enviar</button>
         </div>
