@@ -11,10 +11,9 @@ h1{
     font-size: 50px;
 }
 
-
 fieldset{
     margin: 0 auto;
-    width: 400px;
+    width: 600px;
     padding: 2em;
     border: 2px solid #cccccc;
     background-color: white;
@@ -67,5 +66,8 @@ legend{
     color:black;
 }
 
+.navegacao{
+    text-align: right;
 
 
+}

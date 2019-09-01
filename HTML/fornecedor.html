@@ -7,16 +7,19 @@
     </style>
   </head>
   <body>
-  <img src="C:\Users\lucas.kurata\Desktop\Faculdade\NIXIS\Lucas\nixis2.png" width="90" height="40">
-  <a href="principal.html">Voltar</a>
+  <img src="C:\Users\lucas.kurata\Desktop\Faculdade\NIXIS\IMAGENS\nixis2.png" width="90" height="40">
+  <div class="navegacao">
+    <a href="principal.html">Voltar</a>
+  </div>
+  
   <hr/>
   <fieldset>
         <h1 id = "centro">Fornecedor</h1>
         <hr/>
         <form action = "/processa-fornecedor" method = "post">
         <div>
-            <label for = "nome" >Nome fornecedor: </label>
-            <input type = "text" id = "nome" size="52" maxlength="40" name = "nome_fornecedor" required name = nome pattern="[a-z\s]+$" placeholder = "Nome completo">
+            <label for = "nomefantasia" >Nome fantasia: </label>
+            <input type = "text" id = "nomefantasia" size="52" maxlength="40" name = "nome_fantasia" required name = nome pattern="[a-z\s]+$" placeholder = "Nome completo">
         </div>
         <div>
             <label for = "cod">Cód. Fornecedor: </label>
@@ -29,19 +32,54 @@
         <div>
             <label for = "telefone">Telefone: </label>
             <input type="tel" id = "telefone" size = "52" maxlength="15" name = "telefone_fornecedor" required name = telefone pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" placeholder = "(xx)xxxxx-xxxx">
+            <label for = "celular">Celular: </label>
+            <input type="tel" id = "telefone" size = "52" maxlength="15" name = "telefone_fornecedor" required name = telefone pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" placeholder = "(xx)xxxxx-xxxx">
         </div>
         <div>
             <label for = "endereco">Endereço: </label>
             <input type = "text" id = "endereco" size="52" maxlength="30" name = "endereco_fornecedor" required name = endereco placeholder = "Endereço completo">
         </div>
         <div>
-            <label for = "cnpj">Cnpj: </label>
-            <input type = "text" id = "cnpj" size="52" maxlength="14" name = "cnpj_fornecedor" required name = cnpj placeholder = "Cnpj" pattern="[0-9]+$">
+            <label for = "cpf">CPF: </label>
+            <input type = "text" id = "cpf" size="52" maxlength="11" name = "cpf_fornecedor" required name = cpf placeholder = "Digite sem ponto" pattern="[0-9]+$">
+            <label for = "cnpj">CPNJ: </label>
+            <input type = "text" id = "cnpj" size="52" maxlength="14" name = "cnpj_fornecedor" required name = cnpj placeholder = "Digite sem ponto" pattern="[0-9]+$">
         </div>
+        <p>ggg</p>
         <div>
-        <div>
-            <label for = "cidade">Cidade: </label>
-            <input type = "text" id = "cidade" size="52" maxlength="20" name = "cidade" required name = cidade placeholder = "Cidade" pattern="[a-z\s]+$">
+        <p>Estado:</p>
+            <select name="estado">
+            
+                <option vale = "ac">Acre</option>
+                <option vale = "al">Alagoas</option>
+                <option vale = "ap">Amapá</option>
+                <option vale = "am">Amazonas</option>
+                <option vale = "ba">Bahia</option>
+                <option vale = "cearcea">Ceará</option>
+                <option vale = "df">Distrito Federal</option>
+                <option vale = "es">Espírito Santo</option>
+                <option vale = "go">Goiás</option>
+                <option vale = "ma">Maranhão</option>
+                <option vale = "mt">Mato Grosso</option>
+                <option vale = "ms">Mato Grosso do Sul</option>
+                <option vale = "mg">Minas Gerais</option>
+                <option vale = "pa">Pará</option>
+                <option vale = "pb">Paraíba</option>
+                <option vale = "pr">Paraná</option>
+                <option vale = "pe">Pernambuco</option>
+                <option vale = "pi">Piauí</option>
+                <option vale = "rj">Rio de Janeiro</option>
+                <option vale = "rn">Rio Grande do Norte</option>
+                <option vale = "rs">Rio Grande do Sul</option>
+                <option vale = "ro">Rondônia</option>
+                <option vale = "rr">Roraima</option>
+                <option vale = "sc">Santa Catarina</option>
+                <option vale = "sp">São Paulo</option>
+                <option vale = "se">Sergipe</option>
+                <option vale = "to">Tocantins</option>
+            </select>
+                <label for = "cidade">Cidade: </label>
+                <input type = "text" id = "cidade" size="52" maxlength="20" name = "cidade" required name = cidade placeholder = "Cidade" pattern="[a-z\s]+$">
         </div>
         </div>
         <div class="button">
