@@ -16,7 +16,7 @@
   <fieldset>
         <h1 id = "centro">Fornecedor</h1>
         <hr/>
-        <form action = "/processa-fornecedor" method = "post">
+        <form action = "/Users/lucas.kurata/Desktop/Faculdade/NIXIS" method = "post">
         <div>
             <label for = "nomefantasia" >Nome fantasia: </label>
             <input type = "text" id = "nomefantasia" size="52" maxlength="40" name = "nome_fantasia" required name = nome pattern="[a-z\s]+$" placeholder = "Nome completo">
@@ -31,7 +31,7 @@
         </div>
         <div>
             <label for = "endereco">Endereço: </label>
-            <input type = "text" id = "endereco" size="52" maxlength="30" name = "endereco_fornecedor" required name = endereco placeholder = "Endereço completo">
+            <input type = "text" id = "endereco" size="52" maxlength="30" name = "endereco_fornecedor" required name = endereco placeholder = "Endereço completo" pattern="[a-z\s]+$">
             <label for = "numero">Número: </label>
             <input type = "text" id = "numero" size = 52 maxlenght = "5" name = "numero_fornecedor" required name = numero placeholder = "Número" pattern="[0-9]+$">
         </div>
@@ -42,6 +42,8 @@
             <input type = "text" id = "cnpj" size="52" maxlength="14" name = "cnpj_fornecedor" required name = cnpj placeholder = "Digite sem ponto" pattern="[0-9]+$">
         </div>
         <div>
+			<label for = "cidade">Cidade: </label>
+			<input type = "text" id = "cidade" required name = "cidade" maxlength="30" name = "cidade_fornecedor" placeholder = "Cidade" pattern="[a-z\s]+$">
             <label for = "a">Estado: </label> 
 			<select name="estado">
                 <option value = "ac">Acre</option>
@@ -71,7 +73,8 @@
                 <option value = "sp">São Paulo</option>
                 <option value = "se">Sergipe</option>
                 <option value = "to">Tocantins</option>
-            </select>
+            </select> 
+			
         </div>
 		
         <hr/>

@@ -48,15 +48,16 @@ input:focus, textarea:focus {
     }
 .button {
     /* Para posicionar os botões para a mesma posição dos campos de texto */
-    padding-left: 85px; /* mesmo tamanho que os elementos do tipo label */
-    }
+    padding-left: 483px; /* mesmo tamanho que os elementos do tipo label */
+	}
 button {
     /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
     margin-left: .5em;
-    width: 200px;
+    width: 100px;
     background-color: darkcyan;
     color: white;
     border-radius: 1px;
+	height: 25px;
     }
 .titulo{
     text-align: center;
@@ -70,6 +71,10 @@ legend{
 
 .navegacao{
     text-align: right;
+}
 
-
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
 }
