@@ -7,3 +7,5 @@
 https://stackoverflow.com/questions/17902483/show-values-from-a-mysql-database-table-inside-a-html-table-on-a-webpage
 
 http://rafaelcouto.com.br/sistema-de-busca-interna-com-php-mysql/
+
+https://www.devmedia.com.br/evitando-sql-injection-em-aplicacoes-php/27804
