@@ -47,6 +47,10 @@ iframe{
     text-align: center
 }
 
+#contatos{
+    border-color: pink;
+}
+
 fieldset{
     margin: 0 auto;
     width: 800px;
