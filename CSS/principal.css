@@ -1,12 +1,44 @@
-h1, hr{
-    position:fixed;
-    top: 0px;
-    left: 0px;
-    padding: 10px;
-    margin: 0px;
-    width: 100%;
-    background-color: bisque;
+.menu{
+    background-color:darkblue;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    padding-right: 5rem;
+    width: auto;
+    position: fixed;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    text-align: right;
+    transition: all 0.45s ease;
+    z-index: 1030;
+    
+    display: inline-block;
+}
 
+h1{
+    text-align: center;
+}
+
+a{
+    display: inline;
+    
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    display: inline;
+}
+li{
+    display :inline;
+}
+
+a:active{
+    color: darkgrey;
+}
+a:hover{
+    color: blue;
 }
 
 iframe{
@@ -16,4 +48,21 @@ iframe{
     border: 2px solid #CCC;
     border-radius: 1em;
     
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+
+
+.ocultar{
+    visibility: hidden;
+}
+
+#sobre{
+    background-color:yellow;
+    padding: 10px;
+    margin: 10px;
+    float: right;
 }

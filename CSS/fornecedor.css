@@ -78,3 +78,7 @@ a{
   color: black;
   font-size: 15px;
 }
+
+input.submit:hover{
+    background-color: red;
+}
