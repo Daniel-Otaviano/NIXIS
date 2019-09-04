@@ -1,32 +1,15 @@
-.menu{
-    background-color:darkblue;
-    justify-content: flex-end;
-    -webkit-justify-content: flex-end;
-    padding-right: 5rem;
-    width: auto;
-    position: fixed;
-    left: 0;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: inline-block;
-    text-align: right;
-    transition: all 0.45s ease;
-    z-index: 1030;
-    
-    display: inline-block;
+body{
+    background-color: rgb(235, 235, 235);
 }
 
+
 h1{
-    text-align: center;
+    color:darkcyan;
 }
 
 a{
-    display: inline;
-    
     text-decoration: none;
-    color: white;
+    color:darkcyan;
     font-size: 25px;
     display: inline;
 }
@@ -50,19 +33,26 @@ iframe{
     
 }
 
-body{
-    background-color: rgb(235, 235, 235);
-}
-
-
-
 .ocultar{
     visibility: hidden;
 }
 
 #sobre{
-    background-color:yellow;
-    padding: 10px;
-    margin: 10px;
-    float: right;
+    font-size: 30px;
+    text-align: center;
+    
 }
+
+#maps{
+    text-align: center
+}
+
+fieldset{
+    margin: 0 auto;
+    width: 800px;
+	height: auto;
+    padding: 2em;
+    border: 2px solid #cccccc;
+    background-color: white;
+
+    }

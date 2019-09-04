@@ -31,13 +31,9 @@ $cnpjFornecedor
 $cidadeFornecedor
 $estadoFornecedor";
 
-if (is_string($nomeFornecedor)) and (filter_var($emailFornecedor, FILTER_VALIDATE_EMAIL)) and (is_integer($telefoneFornecedor )) and (is_integer($celularFornecedor )) and (is_string($enderecoFornecedor )) and (is_integer($numeroFornecedor )) and (is_integer($cepFornecedor)) and (is_integer($cnpjFornecedor )) and (is_string($cidadeFornecedor)) and (is_string($estadoFornecedor)):
-	$sql = "insert into fornecedor(nomeFornecedor, emailFornecedor, telefoneFornecedor, celularFornecedor, enderecoFornecedor, numeroFornecedor,
-	cepFornecedor, cnpjFornecedor, cidadeFornecedor, estadoFornecedor) values ('$nomeFornecedor', '$emailFornecedor', '$telefoneFornecedor', '$celularFornecedor', '$enderecoFornecedor',
-   '$numeroFornecedor', '$cepFornecedor', '$cnpjFornecedor', '$cidadeFornecedor', '$estadoFornecedor')";
-else:
-	echo 'erro';
-
+$sql = "insert into fornecedor(nomeFornecedor, emailFornecedor, telefoneFornecedor, celularFornecedor, enderecoFornecedor, numeroFornecedor,
+cepFornecedor, cnpjFornecedor, cidadeFornecedor, estadoFornecedor) values ('$nomeFornecedor', '$emailFornecedor', '$telefoneFornecedor', '$celularFornecedor', '$enderecoFornecedor',
+'$numeroFornecedor', '$cepFornecedor', '$cnpjFornecedor', '$cidadeFornecedor', '$estadoFornecedor')";
 
 $result = mysqli_query($con, $sql);
 
