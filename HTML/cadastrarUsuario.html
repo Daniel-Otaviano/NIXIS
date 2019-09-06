@@ -16,36 +16,36 @@
   <fieldset>
         <h1 id = "centro">Novo usuário</h1>
         <hr/>
-        <form action = "../PHP/action.php" method = "post">
+        <form action = "../PHP/usuario.php" method = "post">
         <div>
             <label for = "nome_usuario" >Novo usuário: </label>
             <input type = "text" id = "nome_usuario" size="52" maxlength="40" name = "nome_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" placeholder = "Digite o seu nome completo" required title = "Formato incorreto, digite novamente">
-            <label for = "nome_usuario" >Nova senha: </label>
-            <input type = "password" id = "nome_usuario" size="52" maxlength="30" name = "nome_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9]+" placeholder = "Digite a sua nova senha" required title = "Formato incorreto, digite novamente">
+            <label for = "senha_usuario" >Nova senha: </label>
+            <input type = "password" id = "senha_usuario" size="52" maxlength="30" name = "senha_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9]+" placeholder = "Digite a sua nova senha" required title = "Formato incorreto, digite novamente">
         </div>
         <div>
             <label for = "telefone">Telefone: </label>
-            <input type="tel" id = "telefone" size = "52" maxlength="15" name = "telefone_fornecedor"  pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4}$" placeholder = "(xx)xxxxx-xxxx" required title = "Formato incorreto, digite novamente">
+            <input type="tel" id = "telefone_usuario" size = "52" maxlength="15" name = "telefone_usuario"  pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4}$" placeholder = "(xx)xxxxx-xxxx" required title = "Formato incorreto, digite novamente">
             <label for = "celular">Celular: </label>
-            <input type="tel" id = "telefone" size = "52" maxlength="15" name = "celular_fornecedor" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}$" placeholder = "(xx)xxxxx-xxxx" required title = "Formato incorreto, digite novamente">
+            <input type="tel" id = "celular_usuario" size = "52" maxlength="15" name = "celular_usuario" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}$" placeholder = "(xx)xxxxx-xxxx" required title = "Formato incorreto, digite novamente">
         </div>
         <div>
             <label for = "endereco">Endereço: </label>
-            <input type = "text" id = "endereco" size="52" maxlength="30" name = "endereco_fornecedor" placeholder = "Endereço completo" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "endereco" size="52" maxlength="30" name = "endereco_usuario" placeholder = "Endereço completo" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" required title = "Formato incorreto, digite novamente">
             <label for = "numero">Número: </label>
-            <input type = "text" id = "numero" size = 52 maxlenght = "5" name = "numero_fornecedor" placeholder = "Número" pattern="[0-9]+$" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "numero" size = 52 maxlenght = "5" name = "numero_usuario" placeholder = "Número" pattern="[0-9]+$" required title = "Formato incorreto, digite novamente">
         </div>
         <div>
-			<label for = "cidade">Cidade: </label>
-			<input type = "text" id = "cidade"  maxlength="30" name = "cidade_fornecedor" placeholder = "Cidade" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" required>
+			       <label for = "cidade">Cidade: </label>
+			       <input type = "text" id = "cidade"  maxlength="30" name = "cidade_usuario" placeholder = "Cidade" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" required>
             <label for = "email">E-mail: </label>
-            <input type = "email" id = "email" size="52" maxlength="40" name = "email_fornecedor" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder = "E-mail" required title = "Formato incorreto, digite novamente">
+            <input type = "email" id = "email" size="52" maxlength="40" name = "email_usuario" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder = "E-mail" required title = "Formato incorreto, digite novamente">
         </div>
 		
         <hr/>
         <div class="button">
             
-            <button type = "submit" onclick = "funcaoEnviar()">Confirmar cadastro</button>
+            <button type = "submit" >Confirmar cadastro</button>
         </div>
     </fieldset>
 	<hr/>

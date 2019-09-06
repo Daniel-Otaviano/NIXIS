@@ -53,11 +53,12 @@ body{
     button {
         /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
         margin-left: .5em;
-        width: 100px;
+        width: auto;
         background-color: darkcyan;
         color: white;
         border-radius: 1px;
-        height: 25px;
+        height: auto;
+
         }
     .titulo{
         text-align: center;
@@ -91,4 +92,9 @@ body{
 label{
     font-size: 20px;
     display: inline;
+}
+
+.cadastrarUsuario{
+    color:darkcyan;
+    text-decoration-color: aqua;
 }
