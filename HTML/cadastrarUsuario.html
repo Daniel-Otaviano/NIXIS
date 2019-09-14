@@ -16,7 +16,7 @@
   <fieldset>
         <h1 id = "centro">Novo usuário</h1>
         <hr/>
-        <form action = "../PHP/usuario.php" method = "post">
+        <form action = "../PHP/cadastrarUsuario.php" method = "post">
         <div>
             <label for = "nome_usuario" >*Novo usuário: </label>
             <input type = "text" id = "nome_usuario" size="52" maxlength="40" name = "nome_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" placeholder = "Digite o seu nome completo" required title = "Formato incorreto, digite novamente">
@@ -25,7 +25,7 @@
         </div>
         <div>
             <label for = "telefone">Telefone: </label>
-            <input type="tel" id = "telefone_usuario" size = "52" maxlength="15" name = "telefone_usuario"  pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4}$" placeholder = "(xx)xxxxx-xxxx"  title = "Formato incorreto, digite novamente">
+            <input type="tel" id = "telefone_usuario" size = "52" maxlength="15" name = "telefone_usuario"  pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4}$" placeholder = "(xx)xxxxx-xxxx (Opcional)"  title = "Formato incorreto, digite novamente">
             <label for = "celular">*Celular: </label>
             <input type="tel" id = "celular_usuario" size = "52" maxlength="15" name = "celular_usuario" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}$" placeholder = "(xx)xxxxx-xxxx" required title = "Formato incorreto, digite novamente">
         </div>

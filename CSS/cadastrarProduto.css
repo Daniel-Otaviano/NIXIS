@@ -48,7 +48,7 @@ body{
         }
     .button {
         /* Para posicionar os botões para a mesma posição dos campos de texto */
-        padding-left: 483px; /* mesmo tamanho que os elementos do tipo label */
+        padding-left: 480px; /* mesmo tamanho que os elementos do tipo label */
         }
     button {
         /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
@@ -58,7 +58,6 @@ body{
         color: white;
         border-radius: 1px;
         height: auto;
-
         }
     .titulo{
         text-align: center;
@@ -83,23 +82,7 @@ body{
     input.submit:hover{
         background-color: red;
     }
-
-.centro{
-    text-align: center;
     
-}
-
-label{
-    font-size: 20px;
-    display: inline;
-}
-
-.cadastrarUsuario{
-    color:darkcyan;
-    text-decoration-color: aqua;
-}
-
-
-input:invalid {
-    border: red 1px solid;
-  }
+    input:invalid {
+        border: red 1px solid;
+      }
