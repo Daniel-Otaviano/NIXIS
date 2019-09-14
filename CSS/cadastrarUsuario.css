@@ -84,4 +84,8 @@ body{
     input.submit:hover{
         background-color: red;
     }
+
+    input:valid {
+        border: green 1px solid;
+      }
     

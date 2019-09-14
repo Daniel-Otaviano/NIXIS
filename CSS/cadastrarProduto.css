@@ -86,3 +86,7 @@ body{
     input:invalid {
         border: red 1px solid;
       }
+
+      input:valid {
+        border: green 1px solid;
+      }
