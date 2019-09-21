@@ -4,7 +4,6 @@
     <title>Cadastro de fornecedores</title>
     <meta charset="utf-8">
     <link rel = "stylesheet" type = "text/css" href = "../CSS/cadastrarFornecedor.css"></style>
-    </script>
   </head>
   <body>
   <img src="../IMAGENS/nixis2.png" width="90" height="40">
@@ -37,7 +36,7 @@
         </div>
         <div>
             <label for = "cep">*CEP: </label>
-            <input type = "text" id = "cep" size="52" maxlength="8" name = "cep_fornecedor" placeholder = "Digite sem ponto" pattern="[0-9]+$" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "cep" size="52" maxlength="8" name = "cep_fornecedor" placeholder = "Digite sem ponto" maxlength="10" onBlur="ValidaCep(form1.cep)" pattern="[0-9]+$" required title = "Formato incorreto, digite novamente">
             <label for = "cnpj">*CPNJ: </label>
             <input type = "text" id = "cnpj" size="52" maxlength="14" name = "cnpj_fornecedor" placeholder = "Digite sem ponto" pattern="[0-9]+$" required title = "Formato incorreto, digite novamente">
         </div>

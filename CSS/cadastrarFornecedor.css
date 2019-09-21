@@ -75,7 +75,7 @@ legend{
 
 a{
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 15px;
 }
 
@@ -86,3 +86,7 @@ input.submit:hover{
 input:invalid {
     border: red 1px solid;
   }
+
+input:valid{
+    border: green 1px solid;
+}

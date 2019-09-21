@@ -1,12 +1,24 @@
 <html>
 <body>
 <?php
-require_once "conexao.php";
+
 
 $con = mysqli_connect("localhost", "root", "", "NIXIS");
 mysqli_set_charset($con,"utf8");
+?>
+<script type="text/javascript">
+	function sucessfully(){
+		setTimeout("window.location='../HTML/cadastrarFornecedor.html'", 900);
+		alert("Cadastrado com sucesso!");
+	}
 
+	function failed(){
+		setTimeout("window.location='../HTML/cadastrarFornecedor.html'", 1300);
+		alert("Esse fornecedor já está cadastrado!");
+	}
+</script>
 
+<?php
 if($con)
 	echo "Conectado";
 else 
@@ -24,13 +36,17 @@ $cidadeFornecedor = $_POST['cidade_fornecedor'];
 $estadoFornecedor = $_POST['estado_fornecedor'];
 
 
+$compara = mysqli_query($con, "SELECT * FROM fornecedor WHERE cepFornecedor = '$cepFornecedor'");
+$row = mysqli_num_rows($compara);
 
-$sql = "insert into fornecedor(nomeFornecedor, emailFornecedor, telefoneFornecedor, celularFornecedor, enderecoFornecedor, numeroFornecedor,
-     cepFornecedor, cnpjFornecedor, cidadeFornecedor, estadoFornecedor) values ('$nomeFornecedor', '$emailFornecedor', '$telefoneFornecedor', '$celularFornecedor', '$enderecoFornecedor',
-	 '$numeroFornecedor', '$cepFornecedor', '$cnpjFornecedor', '$cidadeFornecedor', '$estadoFornecedor')";
-
-     
-	 
+if($row == 1){
+	echo "<script>failed()</script>";
+}if($row == 0){
+	echo '<script>sucessfully()</script>';
+	$sql = "insert into fornecedor(nomeFornecedor, emailFornecedor, telefoneFornecedor, celularFornecedor, enderecoFornecedor, numeroFornecedor,
+		 cepFornecedor, cnpjFornecedor, cidadeFornecedor, estadoFornecedor) values ('$nomeFornecedor', '$emailFornecedor', '$telefoneFornecedor', '$celularFornecedor', '$enderecoFornecedor',
+		 '$numeroFornecedor', '$cepFornecedor', '$cnpjFornecedor', '$cidadeFornecedor', '$estadoFornecedor')"; 
+}
 
 
 $result = mysqli_query($con, $sql);
@@ -39,9 +55,10 @@ if($result)
 	echo "Imserido";
 else
 	echo "Erro";
-header("Location: ../HTML/fornecedor.html");
+
 
 
 ?>
+
 </html>
 </body>

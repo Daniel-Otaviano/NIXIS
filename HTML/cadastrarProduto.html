@@ -8,6 +8,7 @@
   <body>
   <img src="../IMAGENS/nixis2.png" width="90" height="40">
   <div class="navegacao">
+    
     <a href="principal.html">Voltar</a>
   </div>
   
@@ -18,13 +19,13 @@
         <form action = "../PHP/cadastrarProduto.php" method = "post">
         <div>
             <label for = "produto" >*Nome do produto: </label>
-            <input type = "text" id = "nome_produto" size="52" maxlength="30" name = "nome_produto"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+" placeholder = "Digite o nome do produto" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "nome_produto" size="52" maxlength="30" name = "nome_produto"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" placeholder = "Digite o nome do produto" required title = "Formato incorreto, digite novamente">
             <label for = "marca">*Marca: </label>
-            <input type="text" id = "marca" size = "52" maxlength="15" name = "marca"   placeholder = "Digite a marca"  title = "Formato incorreto, digite novamente" required>
+            <input type="text" id = "marca" size = "52" maxlength="15" name = "marca" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" placeholder = "Digite a marca"  title = "Formato incorreto, digite novamente" required>
         </div>
         <div>
             <label for = "numeracao">*Numeração: </label>
-            <input type = "text" id = "numeracao" size = 52 maxlenght = "5" name = "numeracao" placeholder = "Digite a numeração" pattern= "^[A-Za-z0-9]+" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "numeracao" size = 52 maxlenght = "2" name = "numeracao" placeholder = "Digite a numeração" pattern= "^[A-Za-z0-9]{2}" required title = "Formato incorreto, digite novamente">
             <label for = "quantidade" >*Quantidade: </label>
             <input type = "text" id = "quantidade" size="52" maxlength="30" name = "quantidade"  pattern= "[0-9]+$" placeholder = "Digite a quantidade" required title = "Formato incorreto, digite novamente">
         </div>
@@ -77,10 +78,11 @@
 			  <strong>Os campos marcados com asterisco são de preenchimento obrigatório.</strong>
         <hr/>
         <div class="button">
-            
             <button type = "submit" >Confirmar cadastro</button>
+            
         </div>
     </fieldset>
+    
 	<hr/>
   </body>
 </html>

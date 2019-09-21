@@ -88,4 +88,8 @@ body{
     input:valid {
         border: green 1px solid;
       }
+      
+    input:invalid{
+        border: red 1px solid;
+    }
     
