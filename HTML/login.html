@@ -18,12 +18,12 @@
         <hr/>
         <form action = "../PHP/userauthentication.php" method = "post">
         <div class = "centro">
-            <label for = "email">*E-mail: </label>
+            <label for = "email">*E-mail do usuário: </label>
             <input type = "email" id = "email" size="52" maxlength="40" name = "email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder = "E-mail" required title = "Formato incorreto, digite novamente">
         </div>
         <div class = "centro">    
             <label for = "senha">*Digite a sua senha: </label>
-             <input type = "password" id = "senha" size="52" maxlength="14" name = "senha" placeholder = "Senha" pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9 ]+"   title = "Formato incorreto, digite novamente" required>
+             <input type = "password" id = "senha" size="52" maxlength="14" name = "senha" placeholder = "Senha" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ!@#$=%¨*_~`/0-9]+"   title = "Formato incorreto, digite novamente" required>
         </div>
         <br>
         

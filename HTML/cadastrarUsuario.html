@@ -4,6 +4,15 @@
     <title>Cadastro de usuário</title>
     <meta charset="utf-8">
     <link rel = "stylesheet" type = "text/css" href = "../CSS/cadastrarUsuario.css"></style>
+    <script src = "../JQuery/jquery-3.4.1.min.js" ></script>
+    <script src = "../JQuery/jquery.mask.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $('#telefone_usuario').mask('(00) 0000-0000');
+    })
+        $(document).ready(function(){
+           $('#celular_usuario').mask('(00) 00000-0000');
+    })
     </script>
   </head>
   <body>
@@ -19,21 +28,21 @@
         <form action = "../PHP/cadastrarUsuario.php" method = "post">
         <div>
             <label for = "nome_usuario" >*Novo usuário: </label>
-            <input type = "text" id = "nome_usuario" size="52" maxlength="40" name = "nome_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" placeholder = "Digite o seu nome completo" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "nome_usuario" size="52" maxlength="40" name = "nome_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ. ]+" placeholder = "Digite o seu nome completo" required title = "Formato incorreto, digite novamente">
             <label for = "senha_usuario" >*Nova senha: </label>
-            <input type = "password" id = "senha_usuario" size="52" maxlength="30" name = "senha_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9]+" placeholder = "Digite a sua nova senha" required title = "Formato incorreto, digite novamente">
+            <input type = "password" id = "senha_usuario" size="52" maxlength="30" name = "senha_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ!@#=$%¨*_.~`/0-9 ]+" placeholder = "Digite a sua nova senha" required title = "Formato incorreto, digite novamente">
         </div>
         <div>
             <label for = "telefone">Telefone: </label>
-            <input type="tel" id = "telefone_usuario" size = "52" maxlength="15" name = "telefone_usuario"  pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4}$" placeholder = "(xx)xxxxx-xxxx (Opcional)"  title = "Formato incorreto, digite novamente">
+            <input type="tel" id = "telefone_usuario" size = "52" maxlength="15" name = "telefone_usuario" placeholder = "(xx)xxxxx-xxxx"  title = "Formato incorreto, digite novamente">
             <label for = "celular">*Celular: </label>
-            <input type="tel" id = "celular_usuario" size = "52" maxlength="15" name = "celular_usuario" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}$" data-mask="(00) 0000-0000" data-mask-selectonfocus="true"  required title = "Formato incorreto, digite novamente">
+            <input type="tel" id = "celular_usuario" size = "52" maxlength="15" name = "celular_usuario" placeholder = "(xx)xxxxx-xxxx"  required title = "Formato incorreto, digite novamente">
         </div>
         <div>
             <label for = "endereco">*Endereço: </label>
             <input type = "text" id = "endereco" size="52" maxlength="30" name = "endereco_usuario" placeholder = "Endereço completo" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" required title = "Formato incorreto, digite novamente">
             <label for = "numero">*Número: </label>
-            <input type = "text" id = "numero" size = 52 maxlenght = "5" name = "numero_usuario" placeholder = "Número" pattern="[0-9]+$" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "numero" size = "52" maxlenght = "5" name = "numero_usuario" placeholder = "Número" pattern="[0-9]+$" required title = "Formato incorreto, digite novamente">
         </div>
         <div>
 			       <label for = "cidade">*Cidade: </label>

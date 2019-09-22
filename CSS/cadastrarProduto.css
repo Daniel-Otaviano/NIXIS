@@ -70,14 +70,13 @@ body{
     }
     
     .navegacao{
-        
-        display: inline;
+        text-align: right;
     }
     
     a{
       text-decoration: none;
-      color: white;
-      font-size: 15px;
+      color: black;
+      font-size: 20px;
     }
     
     input.submit:hover{

@@ -8,13 +8,13 @@ mysqli_set_charset($con,"utf8");
 <title></title>
 <script type="text/javascript">
 	function loginsucessfully(){
-		setTimeout("window.location='../HTML/fornecedor.html'", 900);
+		setTimeout("window.location='../HTML/principal.html'", 900);
 		alert("Logado com Sucesso!");
 	}
 
 	function loginfailed(){
-		setTimeout("window.location='../HTML/login.html'", 1000);
-		alert("Dados inválidos!");
+		setTimeout("window.location='../HTML/login.html'", 1200);
+		alert("Dados inválidos, tente novamente!");
 	}
 </script>
 </head>

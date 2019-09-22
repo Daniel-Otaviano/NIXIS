@@ -36,7 +36,7 @@ $cidadeFornecedor = $_POST['cidade_fornecedor'];
 $estadoFornecedor = $_POST['estado_fornecedor'];
 
 
-$compara = mysqli_query($con, "SELECT * FROM fornecedor WHERE cepFornecedor = '$cepFornecedor'");
+$compara = mysqli_query($con, "SELECT * FROM fornecedor WHERE cepFornecedor = '$cepFornecedor' or cnpjFornecedor = '$cnpjFornecedor'");
 $row = mysqli_num_rows($compara);
 
 if($row == 1){
