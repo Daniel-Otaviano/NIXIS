@@ -36,18 +36,19 @@ $cidadeFornecedor = $_POST['cidade_fornecedor'];
 $estadoFornecedor = $_POST['estado_fornecedor'];
 
 
-$compara = mysqli_query($con, "SELECT * FROM fornecedor WHERE cepFornecedor = '$cepFornecedor' or cnpjFornecedor = '$cnpjFornecedor'");
+$compara = mysqli_query($con, "SELECT * FROM fornecedor WHERE cnpjFornecedor = '$cnpjFornecedor'");
 $row = mysqli_num_rows($compara);
 
 if($row == 1){
-	echo "<script>failed()</script>";
+	//echo "<script>failed()</script>";
 }if($row == 0){
 	echo '<script>sucessfully()</script>';
-	$sql = "insert into fornecedor(nomeFornecedor, emailFornecedor, telefoneFornecedor, celularFornecedor, enderecoFornecedor, numeroFornecedor,
-		 cepFornecedor, cnpjFornecedor, cidadeFornecedor, estadoFornecedor) values ('$nomeFornecedor', '$emailFornecedor', '$telefoneFornecedor', '$celularFornecedor', '$enderecoFornecedor',
-		 '$numeroFornecedor', '$cepFornecedor', '$cnpjFornecedor', '$cidadeFornecedor', '$estadoFornecedor')"; 
 }
 
+
+$sql = "insert into fornecedor(nomeFornecedor, emailFornecedor, telefoneFornecedor, celularFornecedor, enderecoFornecedor, numeroFornecedor,
+	 cepFornecedor, cnpjFornecedor, cidadeFornecedor, estadoFornecedor) values ('$nomeFornecedor', '$emailFornecedor', '$telefoneFornecedor', '$celularFornecedor', '$enderecoFornecedor',
+	 '$numeroFornecedor', '$cepFornecedor', '$cnpjFornecedor', '$cidadeFornecedor', '$estadoFornecedor')"; 
 
 $result = mysqli_query($con, $sql);
 

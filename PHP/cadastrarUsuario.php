@@ -36,7 +36,7 @@ $emailUsuario = $_POST['email_usuario'];
 $compara = mysqli_query($con, "SELECT * FROM usuario WHERE nome = '$nomeUsuario' or email = '$emailUsuario'");
 $row = mysqli_num_rows($compara);
 
-if($row > 0){
+if($row > 0 || validarSenha($senhaUsuario)){
 	echo "<script>failed()</script>";
 }if($row == 0){
 	echo '<script>sucessfully()</script>';

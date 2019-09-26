@@ -28,8 +28,13 @@ mysqli_set_charset($con,"utf8");
  <th>fornecedor</th>
  <th>categoria_produto</th>
  <th>COR</th>
+ <th>Ações</th>
  </tr>
+ <form name = "ações" action = "" 
+ 
+
 <?php
+
 // Executando consulta SQL
 $query = 'SELECT cod_produto, nome_produto, marca, numeracao, quantidade, 
     valor_custo, valor_venda, fornecedor, categoria_produto, cor FROM produtos';
@@ -61,6 +66,8 @@ while ($registro = mysqli_fetch_array($result))
    echo "<td>".$fornecedorProduto."</td>";
    echo "<td>".$categoriaProduto."</td>";
    echo "<td>".$corProduto."</td>";
+   echo "<td><input type = 'button' value = 'deletar'> <input type = 'button' value = 'alterar'></td>";
+   echo "<input type = 'hidden' value = '$id' name = 'id_cliente'> ";
    echo "</tr>";
  }
 
@@ -71,3 +78,4 @@ mysqli_free_result($result);
 mysqli_close($con);
 
 ?>
+</form>
