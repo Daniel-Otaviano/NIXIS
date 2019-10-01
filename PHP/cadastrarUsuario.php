@@ -27,7 +27,7 @@ mysqli_set_charset($con,"utf8");
 		alert("Tamanho inválido , tente( novamente!");
 	}function valuesInvalid(){
 		setTimeout("window.location = '../HTML/cadastraUsuario.html'", 1200);
-		alert("Valores inválidos, tente novamente!")
+		alert("Não alterar código fonte!");
 	}
 </script>
 
@@ -40,7 +40,7 @@ $celularUsuario = $_POST['celular_usuario'];
 $emailUsuario = $_POST['email_usuario'];
 $cargoUsuario = $_POST['cargo'];
 
-function eliminaMascara(&$variavel){
+function eliminaMascaraString($variavel){
     $variavel = str_replace(".", "", $variavel);
     $variavel = str_replace("-", "", $variavel);
     $variavel = str_replace("/", "", $variavel);
@@ -48,7 +48,28 @@ function eliminaMascara(&$variavel){
     $variavel = str_replace(")", "", $variavel);
     $variavel = str_replace(" ", "", $variavel);
     $variavel = (int)$variavel;
+    if($variavel != 0 ){
+		echo '<script>valuesInvalid()</script>';
+    }
 }
+function eliminaMascaraInt(&$variavel){
+    $variavel = str_replace(".", "", $variavel);
+    $variavel = str_replace("-", "", $variavel);
+    $variavel = str_replace("/", "", $variavel);
+    $variavel = str_replace("(", "", $variavel);
+    $variavel = str_replace(")", "", $variavel);
+    $variavel = str_replace(" ", "", $variavel);
+    $variavel = (int)$variavel;
+    if($variavel == 0){
+		echo '<script>valuesInvalid()</script>';
+    }
+}
+
+eliminaMascaraString($nomeUsuario);
+eliminaMascaraString($telefoneUsuario);
+eliminaMascaraString($celularUsuario);
+eliminaMascaraString($emailUsuario);
+eliminaMascaraString($cargoUsuario);
 
 
 $compara = mysqli_query($con, "SELECT * FROM usuario WHERE email = '$emailUsuario'");
@@ -70,10 +91,6 @@ if (empty($nomeUsuario) || empty($senhaUsuario) || empty($celularUsuario) || emp
 		$result = mysqli_query($con, $sql);
 	}
 } 
-
-
-
-
 
 ?>
 </html>
