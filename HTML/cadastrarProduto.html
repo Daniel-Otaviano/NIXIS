@@ -26,18 +26,18 @@
   <fieldset>
         <h1 id = "centro">Cadastrar produto</h1>
         <hr/>
-        <form action = "../PHP/cadastrarProduto.php" method = "post">
+        <form action = "../PHP/cadastrarProduto.php" method = "post" autocomplete="off">
         <div>
             <label for = "produto" >*Nome do produto: </label>
-            <input type = "text" id = "nome_produto" size="52" maxlength="30" name = "nome_produto"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" placeholder = "Digite o nome do produto" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "nome_produto" size="52" maxlength="30" name = "nome_produto"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9 ]+" placeholder = "Digite o nome do produto" required title = "Formato incorreto, digite novamente">
             <label for = "marca">*Marca: </label>
-            <input type="text" id = "marca" size = "52" maxlength="25" name = "marca" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" placeholder = "Digite a marca"  title = "Formato incorreto, digite novamente" required>
+            <input type="text" id = "marca" size = "52" maxlength="25" name = "marca" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9 ]+" placeholder = "Digite a marca"  title = "Formato incorreto, digite novamente" required>
         </div>
         <div>
             <label for = "numeracao">Numeração: </label>
-            <input type = "text" id = "numeracao" size = "3" maxlength ="3" name = "numeracao" placeholder = "Digite a numeração" pattern= "^[A-Za-z0-9]{2}" title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "numeracao" size = "3" maxlength ="3" name = "numeracao" placeholder = "Digite a numeração" pattern= "[A-Za-z0-9]+$" title = "Formato incorreto, digite novamente">
             <label for = "quantidade" >*Quantidade: </label>
-            <input type = "text" id = "quantidade" size="3" maxlength="3" name = "quantidade"  pattern= "[0-9]{3}+$" placeholder = "Digite a quantidade" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "quantidade" size="3" maxlength="3" name = "quantidade"  pattern= "[0-9]+$" placeholder = "Digite a quantidade" required title = "Formato incorreto, digite novamente">
         </div>
         <div>
             <label for = "valor_custo">*Preço de compra: </label>

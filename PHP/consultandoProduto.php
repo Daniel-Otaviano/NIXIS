@@ -3,7 +3,6 @@
 // Conectando
 $con = mysqli_connect("localhost", "root", "", "NIXIS")
         or die('Could not connect: ' . mysql_error());
-echo 'Connected successfully' . "\n";
 mysqli_set_charset($con,"utf8");
 // Selecionando banco de dados
 ?>
@@ -28,7 +27,8 @@ mysqli_set_charset($con,"utf8");
  <th>fornecedor</th>
  <th>categoria_produto</th>
  <th>COR</th>
- <th>Ações</th>
+ <th>Apagar</th>
+ <th>Alterar</th>
  </tr>
  <form name = "ações" action = "" 
  
@@ -36,7 +36,7 @@ mysqli_set_charset($con,"utf8");
 <?php
 
 // Executando consulta SQL
-$query = 'SELECT cod_produto, nome_produto, marca, numeracao, quantidade, 
+$query = 'SELECT codProduto, nome_produto, marca, numeracao, quantidade, 
     valor_custo, valor_venda, fornecedor, categoria_produto, cor FROM produtos';
 $result = mysqli_query($con, $query) or die('Query failed: ' . mysql_error());
 
@@ -45,7 +45,7 @@ $result = mysqli_query($con, $query) or die('Query failed: ' . mysql_error());
 
 while ($registro = mysqli_fetch_array($result))
  {
-   $id = $registro['cod_produto'];
+   $id = $registro['codProduto'];
    $nomeProduto = $registro['nome_produto'];
    $marcaProduto = $registro['marca'];
    $numeracaoProduto = $registro['numeracao'];
@@ -66,7 +66,8 @@ while ($registro = mysqli_fetch_array($result))
    echo "<td>".$fornecedorProduto."</td>";
    echo "<td>".$categoriaProduto."</td>";
    echo "<td>".$corProduto."</td>";
-   echo "<td><input type = 'button' value = 'deletar'> <input type = 'button' value = 'alterar'></td>";
+   echo "<td><input type = 'button' value = 'Apagar'></td>";
+   echo "<td><input type = 'button' value = 'Alterar'></td>";
    echo "<input type = 'hidden' value = '$id' name = 'id_cliente'> ";
    echo "</tr>";
  }

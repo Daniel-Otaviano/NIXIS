@@ -14,7 +14,23 @@ mysqli_set_charset($con,"utf8");
 
 	function loginfailed(){
 		setTimeout("window.location='../HTML/login.html'", 1200);
-		alert("Dados inválidos, tente novamente!");
+		alert("Dados não cadastrados, tente novamente!");
+	}
+	function emailInvalid(){
+		setTimeout("window.location='../HTML/login.html'", 1200);
+		alert("E-mail inválido, tente novamente!");
+	}
+	function passwordInvalid(){
+		setTimeout("window.location='../HTML/login.html'", 1200);
+		alert("Senha inválida, tente novamente!");
+	}
+	function valuesEquals(){
+		setTimeout("window.location='../HTML/login.html'", 1200);
+		alert("E-mail e Senha repetidos, tente novamente!");
+	}
+	function valuesZeros(){
+		setTimeout("window.location='../HTML/login.html'", 1200);
+		alert("Favor preencher os dados corretamente, tente novamente!");
 	}
 </script>
 </head>
@@ -27,11 +43,25 @@ $encriptografar = base64_encode($senha);
 $sql = mysqli_query($con, "SELECT * FROM usuario WHERE email = '$email' and senha = '$encriptografar'");
 $row = mysqli_num_rows($sql);
 
-if($row == 1){
-	echo '<script>loginsucessfully()</script>';
-}if($row == 0){
-	echo "<script>loginfailed()</script>";
+if (empty($email)){
+	echo '<script>valuesZeros()</script>';
+}if (empty($senha)){
+	echo '<script>emailInvalid()</script>';
 }
+if (strlen($email) < 15){
+	echo '<script>emailInvalid()</script>';
+}if(strlen($senha) <= 5){
+	echo '<script>passwordInvalid()</script>';
+}if($email == $senha){
+	echo '<script>valuesEquals()</script>';
+}else{
+	if($row == 1){
+		echo '<script>loginsucessfully()</script>';
+	}if($row == 0){
+		echo "<script>loginfailed()</script>";
+	}
+}
+
 
 ?>
 	</body>
