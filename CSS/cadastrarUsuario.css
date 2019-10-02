@@ -93,3 +93,10 @@ body{
         border: red 1px solid;
     }
     
+    #obrigatorio{
+        color: rgb(1, 100, 100);
+    }
+
+    #alert{
+        color: red;
+    }
