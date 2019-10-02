@@ -60,7 +60,7 @@ require "../PHP/funcoesUsuario.php";
               <hr/>
               <div class="button">
                   
-                  <button name="enviar" type = "submit" >Confirmar cadastro</button>
+                  <button name = "enviar" type = "submit" >Confirmar cadastro</button>
               </div>
           </form>
                 <?php

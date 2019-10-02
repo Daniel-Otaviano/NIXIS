@@ -1,3 +1,8 @@
+<?php
+require_once "../PHP/conexao.php";
+require "../PHP/funcoesFornecedor.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -91,12 +96,61 @@
             </select> 
             <br>
             <br>
-			<strong>Os campos marcados com asterisco são de preenchimento obrigatório.</strong>
+			<strong id = "obrigatorio">Os campos marcados com asterisco são de preenchimento obrigatório.</strong>
         </div>
         <hr/>
         <div class="button">
-            <button type = "submit" onclick = "funcaoEnviar()">Enviar</button>
+            <button name = "enviar" type = "submit">Enviar</button>
         </div>
+    </form>
+    
+            <?php
+                if(isset($_POST['enviar'])){
+                    $nomeFornecedor = $_POST['nome_fantasia'];
+                    $emailFornecedor = $_POST['email_fornecedor'];
+                    $telefoneFornecedor = $_POST['telefone_fornecedor'];
+                    $celularFornecedor = $_POST['celular_fornecedor'];
+                    $enderecoFornecedor = $_POST['endereco_fornecedor'];
+                    $numeroFornecedor = $_POST['numero_fornecedor'];
+                    $cepFornecedor = $_POST['cep_fornecedor'];
+                    $cnpjFornecedor = $_POST['cnpj_fornecedor'];
+                    $cidadeFornecedor = $_POST['cidade_fornecedor'];
+                    $estadoFornecedor = $_POST['estado_fornecedor'];
+                   
+                    eliminaMascaraInt($telefoneFornecedor);
+                    eliminaMascaraInt($celularFornecedor);
+                    eliminaMascaraInt($cepFornecedor);
+                    eliminaMascaraInt($cnpjFornecedor);
+        
+                    $compara = mysqli_query($con, "SELECT * FROM produtos WHERE marca = '$marcaProduto' and numeracao = '$numeracaoProduto' and categoria_produto = '$categoriaProduto' and cor = '$corProduto' and quantidade = '$quantidadeProduto'");
+                    $row = mysqli_num_rows($compara);
+                                            
+
+                    if (empty($nomeFornecedor) || empty($emailFornecedor) || empty($celularFornecedor) || empty($enderecoFornecedor) || empty($numeroFornecedor) || empty($cepFornecedor) || empty($cnpjFornecedor) || empty($cidadeFornecedor) || empty($estadoFornecedor)){
+                        echo "<strong id = 'alert'>Campos obrigatórios vazios, favor preencher</strong>";
+                    }else if(verificaEntradaInt($celularUsuario) || verificaEntradaInt($numeroFornecedor) || verificaEntradaInt($cepFornecedor) || verificaEntradaInt($cnpjFornecedor)){
+                        echo "<strong id = 'alert'>Não alterar código fonte</strong>";    
+                    }else if(verificaEntradaString($nomeFornecedor) || verificaEntradaString($emailFornecedor) || verificaEntradaString($enderecoFornecedor) ||verificaEntradaString($cidadeFornecedor) ||verificaEntradaString($estadoFornecedor)){
+                        echo "<strong id = 'alert'>Não alterar código fonte</strong>";                    
+                    }else if (strlen($nomeFornecedor) < 6 || strlen($emailFornecedor) < 10|| strlen($celularFornecedor) < 11|| strlen($enderecoFornecedor) < 8 || strlen($numeroFornecedor) < 1 || strlen($cepFornecedor) < 8 || strlen($cnpjFornecedor) < 14|| strlen($cidadeFornecedor) < 5|| strlen($estadoFornecedor) < 2){
+                        echo "<strong id = 'alert'>Algum campo apresenta tamanho inválido</strong>";
+                    }else if($nomeFornecedor == $emailFornecedor || $nomeFornecedor == $enderecoFornecedor || $nomeFornecedor == $cidadeFornecedor || $cepFornecedor == $cnpjFornecedor || $cidadeFornecedor == $enderecoFornecedor || $enderecoFornecedor == $numeroFornecedor){
+                        echo "<strong id = 'alert'>Alguns campos estão repetidos</strong>";
+                    }else{
+                        if($row > 0){
+                            echo "<strong id = 'alert'>Dados já cadastrados, tente novamente com novos dados</strong>";
+                        }if($row == 0){
+                            echo "<strong id = 'alert'>Cadastrado com sucesso!</strong>";
+                            $sql = "insert into fornecedor(nomeFornecedor, emailFornecedor, telefoneFornecedor, celularFornecedor, enderecoFornecedor, numeroFornecedor,
+			                cepFornecedor, cnpjFornecedor, cidadeFornecedor, estadoFornecedor) values ('$nomeFornecedor', '$emailFornecedor', '$telefoneFornecedor', '$celularFornecedor', '$enderecoFornecedor',
+			                '$numeroFornecedor', '$cepFornecedor', '$cnpjFornecedor', '$cidadeFornecedor', '$estadoFornecedor')"; 
+                            $result = mysqli_query($con, $sql);
+                        }
+                    }
+                }
+                
+            ?>
+
     </fieldset>
 	<hr/>
   </body>

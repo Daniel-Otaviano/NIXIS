@@ -90,3 +90,12 @@ input:invalid {
 input:valid{
     border: green 1px solid;
 }
+
+#obrigatorio{
+    color: rgb(1, 100, 100);
+}
+
+#alert{
+    color: red;
+    font-size: 20px;
+}
