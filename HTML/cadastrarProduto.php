@@ -24,14 +24,14 @@ require "../PHP/funcoesProduto.php";
   <img src="../IMAGENS/nixis2.png" width="90" height="40">
   <div class="navegacao">
     
-    <a href="principal.html">Voltar</a>
+    <a href="../HTML/menu.html">Voltar</a>
   </div>
   
   <hr/>
   <fieldset>
         <h1 id = "centro">Cadastrar produto</h1>
         <hr/>
-        <form action = "../PHP/cadastrarProduto.php" method = "post" autocomplete="off">
+        <form action = "" method = "post" autocomplete="off">
         <div>
             <label for = "produto" >*Nome do produto: </label>
             <input type = "text" id = "nome_produto" size="52" maxlength="30" name = "nome_produto"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9 ]+" placeholder = "Digite o nome do produto" required title = "Formato incorreto, digite novamente">
@@ -89,19 +89,18 @@ require "../PHP/funcoesProduto.php";
                 <option value = "Marrom">Marrom</option>
             </select> 
         </div>
-
+        <br>
 			  <strong id = "obrigatorio">Os campos marcados com asterisco são de preenchimento obrigatório.</strong>
         <hr/>
         <div class="button">
             <button name = "enviar" type = "submit" >Confirmar cadastro</button>
-            
         </div>
 
         <?php
              if(isset($_POST['enviar'])){
                 $nomeProduto = $_POST['nome_produto'];
-                $marcaProduto = $_POST['marca'];
-                $numeracaoProduto = $_POST['numeracao'];
+                $marcaProduto = strtolower($_POST['marca']);
+                $numeracaoProduto = strtolower($_POST['numeracao']);
                 $quantidadeProduto = $_POST['quantidade'];
                 $valorCusto = $_POST['valor_custo'];
                 $valorVenda = $_POST['valor_venda'];
@@ -114,21 +113,26 @@ require "../PHP/funcoesProduto.php";
                 eliminaMascaraInt($valorVenda);
                 eliminaMascaraInt($quantidadeProduto);
 
+                $compara = mysqli_query($con, "SELECT * FROM produtos WHERE marca = '$marcaProduto' and numeracao = '$numeracaoProduto' and categoria_produto = '$categoriaProduto' and cor = '$corProduto' and quantidade = '$quantidadeProduto'");
+                $row = mysqli_num_rows($compara);
+
                 if (empty($nomeProduto) || empty($marcaProduto) || empty($quantidadeProduto) || empty($valorCusto) || empty($valorVenda) || empty($categoriaProduto) || empty($corProduto)){
                     echo "<strong id = 'alert'>Campos obrigatórios vazios, favor preencher</strong>";
                 }else if(verificaEntradaInt($quantidadeProduto) || verificaEntradaInt($valorCusto) || verificaEntradaInt($valorVenda)){
                     echo "<strong id = 'alert'>Não alterar código fonte</strong>";    
-                }else if(verificaEntradaString($nomeProduto) || verificaEntradaString($categoriaProduto) || verificaEntradaString($corProduto)){
+                }else if(verificaEntradaString($categoriaProduto) || verificaEntradaString($corProduto)){
                     echo "<strong id = 'alert'>Não alterar código fonte</strong>";                    
-                }else if ((strlen($nomeProduto) < 4|| strlen($marcaProduto) < 4|| strlen($quantidadeProduto) < 1|| strlen($valorCusto) < 3|| strlen($valorVenda) < 3 || strlen($categoriaProduto) < 4 || strlen($corProduto) < 4){
+                }else if ((strlen($nomeProduto) < 4|| strlen($marcaProduto) < 4|| strlen($quantidadeProduto) < 1|| strlen($valorCusto) < 3|| strlen($valorVenda) < 3 || strlen($categoriaProduto) < 4 || strlen($corProduto) < 4)){
                     echo "<strong id = 'alert'>Algum campo apresenta tamanho inválido</strong>";
-                }else if($nomeProduto == $numeracaoProduto || $nomeProduto == $quantidadeProduto || $valorCusto == $valorVenda || $numeracaoProduto == $quantidadeProduto || $nomeProduto == $corProduto || $marcaProduto == $corProduto){
-                    echo "<strong id = 'alert'>Alguns campos estão repetidos</strong>";
+                //}else if($valorCusto == "0.00" || $valorCusto = "00.00" || $valorVenda == "0.00" || $valorVenda == "00.00" || strtolower($nomeProduto) == "nome" || strtolower($marcaProduto) == "marca" || strtolower($numeracaoProduto) == "numeracao"){
+                //    echo "<strong id = 'alert'>Favor preencher os campos corretamente</strong>";
+                }else if(strtolower($nomeProduto) == strtolower($numeracaoProduto) || strtolower($nomeProduto) == strtolower($marcaProduto) || strtolower($nomeProduto) == strtolower($quantidadeProduto) || $valorCusto == $valorVenda || strtolower($numeracaoProduto) == strtolower($quantidadeProduto) || strtolower($nomeProduto) == strtolower($corProduto) || strtolower($marcaProduto) == strtolower($corProduto)){
+                    echo "<strong id = 'alert'>Alguns campos estão repetidos, tente novamente</strong>";
                 }else{
                     if($row > 0){
-                        echo "<strong id = 'alert'>Dados já cadastrados, tente novamente com novos dados</strong>";
+                        echo "<strong id = 'alert'>Produto já cadastrado, tente novamente com novos dados</strong>";
                     }if($row == 0){
-                        echo "<strong id = 'alert'>Cadastrado com sucesso!</strong>";
+                        echo "<strong id = 'cadastradoSucesso'>Produto cadastrado com sucesso!</strong>";
                         $sql = "insert into produtos(nome_produto, marca, numeracao, quantidade, valor_custo, valor_venda, fornecedor,
 	                    categoria_produto, cor) values ('$nomeProduto ', '$marcaProduto', '$numeracaoProduto', '$quantidadeProduto', '$valorCusto',
 	                    '$valorVenda', '$fornecedorProduto', '$categoriaProduto', '$corProduto')";

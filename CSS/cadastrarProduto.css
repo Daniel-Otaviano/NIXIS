@@ -14,7 +14,7 @@ body{
     fieldset{
         margin: 0 auto;
         width: 600px;
-        height: 400px;
+        height: 435px;
         padding: 2em;
         border: 2px solid #cccccc;
         background-color: white;
@@ -97,5 +97,9 @@ body{
 
     #alert{
         color: red;
+        font-size: 20px;
+    }
+    #cadastradoSucesso{
+        color: green;
         font-size: 20px;
     }

@@ -8,28 +8,28 @@ mysqli_set_charset($con,"utf8");
 <title></title>
 <script type="text/javascript">
 	function loginsucessfully(){
-		setTimeout("window.location='../HTML/principal.html'", 900);
+		setTimeout("window.location='../HTML/menu.html'", 900);
 		alert("Logado com Sucesso!");
 	}
 
 	function loginfailed(){
-		setTimeout("window.location='../HTML/login.html'", 1200);
+		setTimeout("window.location='../HTML/login_lucas.html'", 1200);
 		alert("Dados não cadastrados, tente novamente!");
 	}
 	function emailInvalid(){
-		setTimeout("window.location='../HTML/login.html'", 1200);
+		setTimeout("window.location='../login/HTML/login_lucas.html'", 1200);
 		alert("E-mail inválido, tente novamente!");
 	}
 	function passwordInvalid(){
-		setTimeout("window.location='../HTML/login.html'", 1200);
+		setTimeout("window.location='../login/HTML/login_lucas.html'", 1200);
 		alert("Senha inválida, tente novamente!");
 	}
 	function valuesEquals(){
-		setTimeout("window.location='../HTML/login.html'", 1200);
+		setTimeout("window.location='../login/HTML/login_lucas.html'", 1200);
 		alert("E-mail e Senha repetidos, tente novamente!");
 	}
 	function valuesZeros(){
-		setTimeout("window.location='../HTML/login.html'", 1200);
+		setTimeout("window.location='../login/HTML/login_lucas.html'", 1200);
 		alert("Favor preencher os dados corretamente, tente novamente!");
 	}
 </script>

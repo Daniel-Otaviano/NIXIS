@@ -23,7 +23,7 @@ require "../PHP/funcoesUsuario.php";
   <body>
   <img src="../IMAGENS/nixis2.png" width="90" height="40">
   <div class="navegacao">
-    <a href="principal.html">Voltar</a>
+    <a href="../HTML/menu.html">Voltar</a>
   </div>
   
   <hr/>
@@ -45,7 +45,7 @@ require "../PHP/funcoesUsuario.php";
         </div>
         <div>
             <label for = "email">*E-mail: </label>
-            <input type = "email" id = "email" size="52" maxlength="40" name = "email_usuario" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder = "E-mail" required title = "Formato incorreto, digite novamente">
+            <input type = "email" id = "email" size="52" maxlength="40" name = "email_usuario" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder = "E-mail" required title = "Formato incorreto, digite novamente">
             <label for = "categoria">*Cargo: </label>
             <select name="cargo" required>
                 <option value = "Dono">Dono</option>
@@ -54,7 +54,6 @@ require "../PHP/funcoesUsuario.php";
                 <option value = "Balconista/Vendedor">Balconista/Vendedor</option>
             </select> 
         </div>
-        <br>
         <br>
 			  <strong id = "obrigatorio">Os campos marcados com asterisco são de preenchimento obrigatório.</strong>
               <hr/>
@@ -88,13 +87,15 @@ require "../PHP/funcoesUsuario.php";
                         echo "<strong id = 'alert'>Não alterar código fonte</strong>";                    
                     }else if (strlen($nomeUsuario) < 6 || strlen($senhaUsuario) <= 5|| strlen($celularUsuario) < 11 || strlen($emailUsuario) <= 10 || strlen($cargoUsuario) < 4){
                         echo "<strong id = 'alert'>Algum campo apresenta tamanho inválido</strong>";
-                    }else if($emailUsuario == $senhaUsuario || $nomeUsuario == $senhaUsuario || $nomeUsuario == $emailUsuario){
-                        echo "<strong id = 'alert'>Alguns campos estão repetidos</strong>";
+                    }else if(strtolower($senhaUsuario) == "senha123" || strtolower($senhaUsuario) == "abc123" || strtolower($senhaUsuario) == "senha" || strtolower($senhaUsuario) == "pekeri" || strtolower($senhaUsuario) == "pekericalcados" || strtolower($senhaUsuario) == "pekeri_calçados" || strtolower($senhaUsuario) == "senha2019" || strtolower($senhaUsuario) == "teste" || strtolower($senhaUsuario) == "teste123"){
+                        echo "<strong id = 'alert'>Senha inválida, tente novamente</strong>";
+                    }else if($emailUsuario == $senhaUsuario || strtolower($nomeUsuario) == strtolower($senhaUsuario) || $nomeUsuario == $emailUsuario){
+                        echo "<strong id = 'alert'>Alguns campos estão repetidos, tente novamente</strong>";
                     }else{
                         if($row > 0){
                             echo "<strong id = 'alert'>Dados já cadastrados, tente novamente com novos dados</strong>";
                         }if($row == 0){
-                            echo "<strong id = 'alert'>Cadastrado com sucesso!</strong>";
+                            echo "<strong id = 'cadastradoSucesso'>Usuário cadastrado com sucesso!</strong>";
                             $sql = "insert into usuario(nome, senha, telefone, celular, email, cargo) values ('$nomeUsuario', '$criptografado', '$telefoneUsuario', '$celularUsuario',
                             '$emailUsuario', '$cargoUsuario')";
                             $result = mysqli_query($con, $sql);

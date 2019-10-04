@@ -8,7 +8,7 @@ require "../PHP/funcoesFornecedor.php";
   <head>
     <title>Cadastro de fornecedores</title>
     <meta charset="utf-8">
-    <link rel = "stylesheet" type = "text/css" href = "../CSS/cadastrarFornecedor.css"></style>
+    <link rel = "stylesheet" type = "text/css" href = "../CSS/cadastrarFornecedor.css">
   </head>
   <script src = "../JQuery/jquery-3.4.1.min.js" ></script>
   <script src = "../JQuery/jquery.mask.js" ></script>
@@ -30,13 +30,13 @@ require "../PHP/funcoesFornecedor.php";
   <body>
   <img src="../IMAGENS/nixis2.png" width="90" height="40">
   <div class="navegacao">
-    <a href="principal.html">Voltar</a>
+    <a href="../HTML/menu.html">Voltar</a>
   </div>
   <hr/>
   <fieldset>
         <h1 id = "centro">Cadastrar Fornecedor</h1>
         <hr/>
-        <form action = "../PHP/cadastrarFornecedor.php" method = "post" autocomplete="off">
+        <form action = "" method = "post" autocomplete="off">
         <div>
             <label for = "nomefantasia" >*Nome fantasia: </label>
             <input type = "text" id = "nomefantasia" size="52" maxlength="40" name = "nome_fantasia"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ!@#=$%¨*_/0-9 ]+"  placeholder = "Nome completo" required title = "Formato incorreto, digite novamente">
@@ -69,7 +69,7 @@ require "../PHP/funcoesFornecedor.php";
                 <option value = "Acre">Acre</option>
                 <option value = "Alagoas">Alagoas</option>
                 <option value = "Amapá">Amapá</option>
-	              <option value = "Amazonas">Amazonas</option>
+	            <option value = "Amazonas">Amazonas</option>
                 <option value = "Bahia">Bahia</option>
                 <option value = "Ceará">Ceará</option>
                 <option value = "Distrito Federal">Distrito Federal</option>
@@ -122,7 +122,7 @@ require "../PHP/funcoesFornecedor.php";
                     eliminaMascaraInt($cepFornecedor);
                     eliminaMascaraInt($cnpjFornecedor);
         
-                    $compara = mysqli_query($con, "SELECT * FROM produtos WHERE marca = '$marcaProduto' and numeracao = '$numeracaoProduto' and categoria_produto = '$categoriaProduto' and cor = '$corProduto' and quantidade = '$quantidadeProduto'");
+                    $compara = mysqli_query($con, "SELECT * FROM fornecedor WHERE cnpjFornecedor = '$cnpjFornecedor'");
                     $row = mysqli_num_rows($compara);
                                             
 
@@ -135,12 +135,12 @@ require "../PHP/funcoesFornecedor.php";
                     }else if (strlen($nomeFornecedor) < 6 || strlen($emailFornecedor) < 10|| strlen($celularFornecedor) < 11|| strlen($enderecoFornecedor) < 8 || strlen($numeroFornecedor) < 1 || strlen($cepFornecedor) < 8 || strlen($cnpjFornecedor) < 14|| strlen($cidadeFornecedor) < 5|| strlen($estadoFornecedor) < 2){
                         echo "<strong id = 'alert'>Algum campo apresenta tamanho inválido</strong>";
                     }else if($nomeFornecedor == $emailFornecedor || $nomeFornecedor == $enderecoFornecedor || $nomeFornecedor == $cidadeFornecedor || $cepFornecedor == $cnpjFornecedor || $cidadeFornecedor == $enderecoFornecedor || $enderecoFornecedor == $numeroFornecedor){
-                        echo "<strong id = 'alert'>Alguns campos estão repetidos</strong>";
+                        echo "<strong id = 'alert'>Alguns campos estão repetidos, tente novamente</strong>";
                     }else{
                         if($row > 0){
-                            echo "<strong id = 'alert'>Dados já cadastrados, tente novamente com novos dados</strong>";
+                            echo "<strong id = 'alert'>Fornecedor já cadastrado, tente novamente com novos dados</strong>";
                         }if($row == 0){
-                            echo "<strong id = 'alert'>Cadastrado com sucesso!</strong>";
+                            echo "<strong id = 'cadastradoSucesso'>Fornecedor cadastrado com sucesso!</strong>";
                             $sql = "insert into fornecedor(nomeFornecedor, emailFornecedor, telefoneFornecedor, celularFornecedor, enderecoFornecedor, numeroFornecedor,
 			                cepFornecedor, cnpjFornecedor, cidadeFornecedor, estadoFornecedor) values ('$nomeFornecedor', '$emailFornecedor', '$telefoneFornecedor', '$celularFornecedor', '$enderecoFornecedor',
 			                '$numeroFornecedor', '$cepFornecedor', '$cnpjFornecedor', '$cidadeFornecedor', '$estadoFornecedor')"; 
