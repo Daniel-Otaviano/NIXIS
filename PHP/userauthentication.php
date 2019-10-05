@@ -13,23 +13,23 @@ mysqli_set_charset($con,"utf8");
 	}
 
 	function loginfailed(){
-		setTimeout("window.location='../HTML/login_lucas.html'", 1200);
+		setTimeout("window.location='../HTML/login_lucas.php'", 1200);
 		alert("Dados não cadastrados, tente novamente!");
 	}
 	function emailInvalid(){
-		setTimeout("window.location='../login/HTML/login_lucas.html'", 1200);
+		setTimeout("window.location='../login/HTML/login_lucas.php'", 1200);
 		alert("E-mail inválido, tente novamente!");
 	}
 	function passwordInvalid(){
-		setTimeout("window.location='../login/HTML/login_lucas.html'", 1200);
+		setTimeout("window.location='../login/HTML/login_lucas.php'", 1200);
 		alert("Senha inválida, tente novamente!");
 	}
 	function valuesEquals(){
-		setTimeout("window.location='../login/HTML/login_lucas.html'", 1200);
+		setTimeout("window.location='../login/HTML/login_lucas.php'", 1200);
 		alert("E-mail e Senha repetidos, tente novamente!");
 	}
 	function valuesZeros(){
-		setTimeout("window.location='../login/HTML/login_lucas.html'", 1200);
+		setTimeout("window.location='../login/HTML/login_lucas.php'", 1200);
 		alert("Favor preencher os dados corretamente, tente novamente!");
 	}
 </script>
@@ -47,8 +47,7 @@ if (empty($email)){
 	echo '<script>valuesZeros()</script>';
 }if (empty($senha)){
 	echo '<script>emailInvalid()</script>';
-}
-if (strlen($email) < 15){
+}if (strlen($email) < 15){
 	echo '<script>emailInvalid()</script>';
 }if(strlen($senha) <= 5){
 	echo '<script>passwordInvalid()</script>';

@@ -21,9 +21,8 @@ require "../PHP/funcoesProduto.php";
   </script>
   </head>
   <body>
-  <img src="../IMAGENS/nixis2.png" width="90" height="40">
+    <a href = "../HTML/menu.html"><img src="../IMAGENS/logo.png" width="100" height="50"></a>
   <div class="navegacao">
-    
     <a href="../HTML/menu.html">Voltar</a>
   </div>
   
@@ -34,25 +33,25 @@ require "../PHP/funcoesProduto.php";
         <form action = "" method = "post" autocomplete="off">
         <div>
             <label for = "produto" >*Nome do produto: </label>
-            <input type = "text" id = "nome_produto" size="52" maxlength="30" name = "nome_produto"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9 ]+" placeholder = "Digite o nome do produto" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "nome_produto" size="52" maxlength="30" name = "nome_produto"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9 ]+" placeholder = "Digite o nome do produto" required title = "Nome do produto">
             <label for = "marca">*Marca: </label>
-            <input type="text" id = "marca" size = "52" maxlength="25" name = "marca" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9 ]+" placeholder = "Digite a marca"  title = "Formato incorreto, digite novamente" required>
+            <input type="text" id = "marca" size = "52" maxlength="25" name = "marca" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9 ]+" placeholder = "Digite a marca"  title = "Marca do produto" required>
         </div>
         <div>
             <label for = "numeracao">Numeração: </label>
-            <input type = "text" id = "numeracao" size = "3" maxlength ="3" name = "numeracao" placeholder = "Digite a numeração" pattern= "[A-Za-z0-9]+$" title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "numeracao" size = "3" maxlength ="3" name = "numeracao" placeholder = "Digite a numeração" pattern= "[A-Za-z0-9]+$" title = "Campo opcional">
             <label for = "quantidade" >*Quantidade: </label>
-            <input type = "text" id = "quantidade" size="3" maxlength="3" name = "quantidade"  pattern= "[0-9]+$" placeholder = "Digite a quantidade" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "quantidade" size="3" maxlength="3" name = "quantidade"  pattern= "[0-9]+$" placeholder = "Digite a quantidade" required title = "Quantidade do produto">
         </div>
         <div>
             <label for = "valor_custo">*Preço de compra: </label>
-            <input type="text" id = "valor_custo" size = "52" maxlength="15" name = "valor_custo" placeholder = "Preço unitário"  required title = "Formato incorreto, digite novamente">
+            <input type="text" id = "valor_custo" size = "52" maxlength="15" name = "valor_custo" placeholder = "Preço unitário"  required title = "Preço bruto unitário">
             <label for = "valor_venda">*Preço de venda: </label>
-            <input type = "text" id = "valor_venda" size=" 52" maxlength="15" name = "valor_venda" placeholder = "Preço unitário" title = "Formato incorreto, digite novamente" required>
+            <input type = "text" id = "valor_venda" size=" 52" maxlength="15" name = "valor_venda" placeholder = "Preço unitário" title = "Preço unitário a ser vendido" required>
         </div>
         <div>
 		    <label for = "fornecedor">Fornecedor: </label>
-			<input type = "text" id = "fornecedor"  maxlength="30" name = "fornecedor" placeholder = "(Opcional)" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+">
+			<input type = "text" id = "fornecedor"  maxlength="30" name = "fornecedor" placeholder = "(Opcional)" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" title = "Campo opcional">
             <label for = "categoria">*Categoria: </label>
             <select name="categoria_produto" required>
                 <option value = "Botas">Botas</option>
@@ -145,5 +144,6 @@ require "../PHP/funcoesProduto.php";
     </fieldset>
     
 	<hr/>
+    <p class = "centralizar">Copyright © 2019 - Nixis Tecnologia</p>
   </body>
 </html>

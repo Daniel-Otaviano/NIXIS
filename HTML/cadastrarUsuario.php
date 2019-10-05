@@ -21,7 +21,7 @@ require "../PHP/funcoesUsuario.php";
     </script>
   </head>
   <body>
-  <img src="../IMAGENS/nixis2.png" width="90" height="40">
+  <a href = "../HTML/menu.html"><img src="../IMAGENS/logo.png" width="100" height="50"></a>
   <div class="navegacao">
     <a href="../HTML/menu.html">Voltar</a>
   </div>
@@ -33,19 +33,19 @@ require "../PHP/funcoesUsuario.php";
         <form action = "" method = "post" autocomplete="off">
         <div>
             <label for = "nome_usuario" >*Novo completo: </label>
-            <input type = "text" id = "nome_usuario" size="52" maxlength="40" autocomplete="off" name = "nome_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" placeholder = "Digite o nome completo" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "nome_usuario" size="52" maxlength="40" autocomplete="off" name = "nome_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" placeholder = "Digite o nome completo" required title = "Nome completo">
             <label for = "senha_usuario" >*Nova senha: </label>
-            <input type = "password" id = "senha_usuario" size="52" min = "5" maxlength="30" name = "senha_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ!@#=$%¨*_.~`/0-9 ]+" placeholder = "Digite a senha" required title = "Formato incorreto, digite novamente">
+            <input type = "password" id = "senha_usuario" size="52" min = "5" maxlength="30" name = "senha_usuario"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ!@#=$%¨*_.~`/0-9 ]+" placeholder = "Digite a senha" required title = "Apenas números e letras">
         </div>
         <div>
             <label for = "telefone">Telefone: </label>
-            <input type="tel" id = "telefone_usuario" size = "52" maxlength="15" autocomplete="off" name = "telefone_usuario" placeholder = "(xx)xxxxx-xxxx"  title = "Formato incorreto, digite novamente">
+            <input type="tel" id = "telefone_usuario" size = "52" maxlength="15" autocomplete="off" name = "telefone_usuario" placeholder = "(xx) xxxxx-xxxx"  title = "Campo opcional">
             <label for = "celular">*Celular: </label>
-            <input type="tel" id = "celular_usuario" size = "52" maxlength="15" autocomplete="off" name = "celular_usuario" placeholder = "(xx)xxxxx-xxxx"  required title = "Formato incorreto, digite novamente">
+            <input type="tel" id = "celular_usuario" size = "52" maxlength="15" autocomplete="off" name = "celular_usuario" placeholder = "(xx) xxxxx-xxxx"  required title = "(DDD) + 00000-0000">
         </div>
         <div>
             <label for = "email">*E-mail: </label>
-            <input type = "email" id = "email" size="52" maxlength="40" name = "email_usuario" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder = "E-mail" required title = "Formato incorreto, digite novamente">
+            <input type = "email" id = "email" size="52" maxlength="40" name = "email_usuario" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder = "E-mail" required title = "E-mail completo">
             <label for = "categoria">*Cargo: </label>
             <select name="cargo" required>
                 <option value = "Dono">Dono</option>
@@ -106,5 +106,6 @@ require "../PHP/funcoesUsuario.php";
                 ?>
                 </fieldset>
 	<hr/>
+    <p class = "centralizar">Copyright © 2019 - Nixis Tecnologia</p>
   </body>
 </html>

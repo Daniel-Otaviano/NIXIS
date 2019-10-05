@@ -72,6 +72,9 @@ body{
     .navegacao{
         text-align: right;
     }
+    .centralizar{
+        text-align: center;
+    }
     
     a{
       text-decoration: none;

@@ -28,7 +28,7 @@ require "../PHP/funcoesFornecedor.php";
     
   </script>
   <body>
-  <img src="../IMAGENS/nixis2.png" width="90" height="40">
+    <a href = "../HTML/menu.html"><img src="../IMAGENS/logo.png" width="100" height="50"></a>
   <div class="navegacao">
     <a href="../HTML/menu.html">Voltar</a>
   </div>
@@ -39,31 +39,31 @@ require "../PHP/funcoesFornecedor.php";
         <form action = "" method = "post" autocomplete="off">
         <div>
             <label for = "nomefantasia" >*Nome fantasia: </label>
-            <input type = "text" id = "nomefantasia" size="52" maxlength="40" name = "nome_fantasia"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ!@#=$%¨*_/0-9 ]+"  placeholder = "Nome completo" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "nomefantasia" size="52" maxlength="40" name = "nome_fantasia"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ!@#=$%¨*_/0-9 ]+"  placeholder = "Nome completo" required title = "Nome da empresa do fornecedor">
             <label for = "email">*E-mail: </label>
-            <input type = "email" id = "email" size="52" maxlength="40" name = "email_fornecedor" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder = "E-mail" required title = "Formato incorreto, digite novamente">
+            <input type = "email" id = "email" size="52" maxlength="40" name = "email_fornecedor" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder = "E-mail completo" required title = "E-mail do fornecedor">
         </div>
         <div>
             <label for = "telefone">Telefone: </label>
-            <input type="tel" id = "telefone" size = "52" maxlength="15" name = "telefone_fornecedor"  placeholder = "(xx) xxxxx-xxxx"  title = "Formato incorreto, digite novamente">
+            <input type="tel" id = "telefone" size = "52" maxlength="15" name = "telefone_fornecedor"  placeholder = "(xx) xxxxx-xxxx"  title = "Campo opcional">
             <label for = "celular">*Celular: </label>
-            <input type="tel" id = "celular" size = "52" maxlength="15" name = "celular_fornecedor" placeholder = "(xx) xxxxx-xxxx" required title = "Formato incorreto, digite novamente">
+            <input type="tel" id = "celular" size = "52" maxlength="15" name = "celular_fornecedor" placeholder = "(xx) xxxxx-xxxx" required title = "(DDD) + 00000-0000">
         </div>
         <div>
             <label for = "endereco">*Endereço: </label>
-            <input type = "text" id = "endereco" size="52" maxlength="30" name = "endereco_fornecedor" placeholder = "Endereço completo" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "endereco" size="52" maxlength="30" name = "endereco_fornecedor" placeholder = "Endereço completo" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" required title = "Endereço do Fornecedor">
             <label for = "numero">*Número: </label>
-            <input type = "text" id = "numero" size = 52 maxlenght = "5" name = "numero_fornecedor" placeholder = "Número" pattern="[0-9]+$" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "numero" size = 52 maxlenght = "5" name = "numero_fornecedor" placeholder = "Número" pattern="[0-9]+$" required title = "Número do endereço">
         </div>
         <div>
             <label for = "cep">*CEP: </label>
-            <input type = "text" id = "cep" size="52" maxlength="8" name = "cep_fornecedor"  placeholder = "Digite o CEP" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "cep" size="52" maxlength="8" name = "cep_fornecedor"  placeholder = "Digite o CEP" required title = "CEP completo">
             <label for = "cnpj">*CPNJ: </label>
-            <input type = "text" id = "cnpj" size="52" maxlength="14" name = "cnpj_fornecedor" placeholder = "Digite o CNPJ" required title = "Formato incorreto, digite novamente">
+            <input type = "text" id = "cnpj" size="52" maxlength="14" name = "cnpj_fornecedor" placeholder = "Digite o CNPJ" required title = "CNPJ completo">
         </div>
         <div>
 			<label for = "cidade">*Cidade: </label>
-			<input type = "text" id = "cidade"  maxlength="30" name = "cidade_fornecedor" placeholder = "Cidade" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" required>
+			<input type = "text" id = "cidade"  maxlength="30" name = "cidade_fornecedor" placeholder = "Cidade" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" required title = "Cidade do Fornecedor">
             <label for = "a">*Estado: </label> 
 			<select name="estado_fornecedor">
                 <option value = "Acre">Acre</option>
@@ -153,5 +153,6 @@ require "../PHP/funcoesFornecedor.php";
 
     </fieldset>
 	<hr/>
+    <p class = "centralizar">Copyright © 2019 - Nixis Tecnologia</p>
   </body>
 </html>
