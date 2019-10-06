@@ -19,6 +19,37 @@ require "../PHP/funcoesUsuario.php";
            $('#celular_usuario').mask('(00) 00000-0000');
     })
     </script>
+    <script type="text/javascript">
+    //Função para remover a mensagem do ECHO depois de alguns segundos
+        function removeMensagem(){
+            setTimeout(function(){ 
+            var msg = document.getElementById("alert");
+            msg.parentNode.removeChild(msg);   
+        }, 5000);
+    }
+        document.onreadystatechange = () => {
+            if (document.readyState === 'complete') {
+                // toda vez que a página carregar, vai limpar a mensagem (se houver) 
+                // após 5 segundos
+            removeMensagem(); 
+        }
+    };
+
+         //Função para remover a mensagem do ECHO depois de alguns segundos
+         function removeMensagem(){
+            setTimeout(function(){ 
+            var msg = document.getElementById("cadastradoSucesso");
+            msg.parentNode.removeChild(msg);   
+        }, 5000);
+    }
+        document.onreadystatechange = () => {
+            if (document.readyState === 'complete') {
+                // toda vez que a página carregar, vai limpar a mensagem (se houver) 
+                // após 5 segundos
+            removeMensagem(); 
+        }
+    };
+    </script>
   </head>
   <body>
   <a href = "../HTML/menu.html"><img src="../IMAGENS/logo.png" width="100" height="50"></a>
@@ -102,6 +133,7 @@ require "../PHP/funcoesUsuario.php";
                         }
                     }
                 }
+                    
                 
                 ?>
                 </fieldset>

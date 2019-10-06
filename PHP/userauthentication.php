@@ -1,6 +1,7 @@
 <?php
 $con = mysqli_connect("localhost", "root", "", "NIXIS");
 mysqli_set_charset($con,"utf8");
+
 ?>
 
 <html>
@@ -42,6 +43,7 @@ $senha=$_POST['senha'];
 $encriptografar = base64_encode($senha);
 $sql = mysqli_query($con, "SELECT * FROM usuario WHERE email = '$email' and senha = '$encriptografar'");
 $row = mysqli_num_rows($sql);
+
 
 if (empty($email)){
 	echo '<script>valuesZeros()</script>';

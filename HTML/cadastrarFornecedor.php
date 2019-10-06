@@ -1,6 +1,7 @@
 <?php
 require_once "../PHP/conexao.php";
-require "../PHP/funcoesFornecedor.php";
+require "../PHP/funcoesFornecedor.php"; 
+
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +28,37 @@ require "../PHP/funcoesFornecedor.php";
     })
     
   </script>
+  <script type="text/javascript">
+    //Função para remover a mensagem do ECHO depois de alguns segundos
+        function removeMensagem(){
+            setTimeout(function(){ 
+            var msg = document.getElementById("alert");
+            msg.parentNode.removeChild(msg);   
+        }, 5000);
+    }
+        document.onreadystatechange = () => {
+            if (document.readyState === 'complete') {
+                // toda vez que a página carregar, vai limpar a mensagem (se houver) 
+                // após 5 segundos
+            removeMensagem(); 
+        }
+    };
+
+       //Função para remover a mensagem do ECHO depois de alguns segundos
+       function removeMensagem(){
+            setTimeout(function(){ 
+            var msg = document.getElementById("cadastradoSucesso");
+            msg.parentNode.removeChild(msg);   
+        }, 5000);
+    }
+        document.onreadystatechange = () => {
+            if (document.readyState === 'complete') {
+                // toda vez que a página carregar, vai limpar a mensagem (se houver) 
+                // após 5 segundos
+            removeMensagem(); 
+        }
+    };
+    </script>
   <body>
     <a href = "../HTML/menu.html"><img src="../IMAGENS/logo.png" width="100" height="50"></a>
   <div class="navegacao">

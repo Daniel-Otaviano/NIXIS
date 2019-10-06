@@ -73,6 +73,10 @@ body{
     .navegacao{
         text-align: right;
     }
+
+    .centralizar{
+        text-align: center;
+    }
     
     a{
       text-decoration: none;
@@ -111,4 +115,14 @@ input:valid {
 #obrigatorio{
     color: rgb(1, 100, 100);
     font-size: 17px;
+}
+
+#alert{
+    color: red;
+    font-size: 20px;
+}
+
+#cadastradoSucesso{
+    color: green;
+    font-size: 20px;
 }
