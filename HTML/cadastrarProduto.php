@@ -12,20 +12,21 @@ require "../PHP/funcoesProduto.php";
     <link rel = "stylesheet" type = "text/css" href = "../CSS/cadastrarProduto.css">
     <script src = "../JQuery/jquery-3.4.1.min.js" ></script>
     <script src = "../JQuery/jquery.mask.js" ></script>
-    <script>
+    <script type="text/javascript">
         $(document).ready(function(){
             $('#valor_custo').mask('0000.00', {reverse: true});
     })
         $(document).ready(function(){
            $('#valor_venda').mask('0000.00', {reverse: true});
     })
-  </script>
-  <script type="text/javascript">
+    
     //Função para remover a mensagem do ECHO depois de alguns segundos
-        function removeMensagem(){
+    function removeMensagem(){
             setTimeout(function(){ 
             var msg = document.getElementById("alert");
-            msg.parentNode.removeChild(msg);   
+            var msg2 = document.getElementById("cadastradoSucesso");
+            msg.parentNode.removeChild(msg);
+            msg2.parentNode.removeChild(msg2);   
         }, 5000);
     }
         document.onreadystatechange = () => {
@@ -36,20 +37,6 @@ require "../PHP/funcoesProduto.php";
         }
     };
 
-         //Função para remover a mensagem do ECHO depois de alguns segundos
-         function removeMensagem(){
-            setTimeout(function(){ 
-            var msg = document.getElementById("cadastradoSucesso");
-            msg.parentNode.removeChild(msg);   
-        }, 5000);
-    }
-        document.onreadystatechange = () => {
-            if (document.readyState === 'complete') {
-                // toda vez que a página carregar, vai limpar a mensagem (se houver) 
-                // após 5 segundos
-            removeMensagem(); 
-        }
-    };
     </script>
   </head>
   <body>
@@ -64,6 +51,7 @@ require "../PHP/funcoesProduto.php";
         <hr/>
         <form action = "" method = "post" autocomplete="off">
         <div>
+            <input type = "hidden" name = "txtid" value  = "<?php echo $registro['codProduto']; ?>">
             <label for = "produto" >*Nome do produto: </label>
             <input type = "text" id = "nome_produto" size="52" maxlength="30" name = "nome_produto"  pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9 ]+" placeholder = "Digite o nome do produto" required title = "Nome do produto">
             <label for = "marca">*Marca: </label>
@@ -71,7 +59,7 @@ require "../PHP/funcoesProduto.php";
         </div>
         <div>
             <label for = "numeracao">Numeração: </label>
-            <input type = "text" id = "numeracao" size = "3" maxlength ="3" name = "numeracao" placeholder = "Digite a numeração" pattern= "[A-Za-z0-9]+$" title = "Campo opcional">
+            <input type = "text" id = "numeracao" size = "3" maxlength ="3" name = "numeracao" placeholder = "Digite a numeração" pattern= "[A-Za-z0-9]+$" title = "Campo opcional" >
             <label for = "quantidade" >*Quantidade: </label>
             <input type = "text" id = "quantidade" size="3" maxlength="3" name = "quantidade"  pattern= "[0-9]+$" placeholder = "Digite a quantidade" required title = "Quantidade do produto">
         </div>
@@ -157,7 +145,7 @@ require "../PHP/funcoesProduto.php";
                     echo "<strong id = 'alert'>Algum campo apresenta tamanho inválido</strong>";
                 //}else if($valorCusto == "0.00" || $valorCusto = "00.00" || $valorVenda == "0.00" || $valorVenda == "00.00" || strtolower($nomeProduto) == "nome" || strtolower($marcaProduto) == "marca" || strtolower($numeracaoProduto) == "numeracao"){
                 //    echo "<strong id = 'alert'>Favor preencher os campos corretamente</strong>";
-                }else if(strtolower($nomeProduto) == strtolower($numeracaoProduto) || strtolower($nomeProduto) == strtolower($marcaProduto) || strtolower($nomeProduto) == strtolower($quantidadeProduto) || $valorCusto == $valorVenda || strtolower($numeracaoProduto) == strtolower($quantidadeProduto) || strtolower($nomeProduto) == strtolower($corProduto) || strtolower($marcaProduto) == strtolower($corProduto)){
+                }else if(strtolower($nomeProduto) == strtolower($numeracaoProduto) || strtolower($nomeProduto) == strtolower($marcaProduto) || strtolower($nomeProduto) == strtolower($quantidadeProduto) || $valorCusto == $valorVenda ||  strtolower($nomeProduto) == strtolower($corProduto) || strtolower($marcaProduto) == strtolower($corProduto)){
                     echo "<strong id = 'alert'>Alguns campos estão repetidos, tente novamente</strong>";
                 }else{
                     if($row > 0){

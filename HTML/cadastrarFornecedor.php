@@ -13,7 +13,7 @@ require "../PHP/funcoesFornecedor.php";
   </head>
   <script src = "../JQuery/jquery-3.4.1.min.js" ></script>
   <script src = "../JQuery/jquery.mask.js" ></script>
-  <script>
+  <script type="text/javascript">
     $(document).ready(function(){
          $('#cep').mask('00000-000');
     })
@@ -27,13 +27,13 @@ require "../PHP/funcoesFornecedor.php";
           $('#celular').mask('(00) 00000-0000');
     })
     
-  </script>
-  <script type="text/javascript">
-    //Função para remover a mensagem do ECHO depois de alguns segundos
-        function removeMensagem(){
+   //Função para remover a mensagem do ECHO depois de alguns segundos
+   function removeMensagem(){
             setTimeout(function(){ 
             var msg = document.getElementById("alert");
-            msg.parentNode.removeChild(msg);   
+            var msg2 = document.getElementById("cadastradoSucesso");
+            msg.parentNode.removeChild(msg);
+            msg2.parentNode.removeChild(msg2);   
         }, 5000);
     }
         document.onreadystatechange = () => {
@@ -44,20 +44,6 @@ require "../PHP/funcoesFornecedor.php";
         }
     };
 
-       //Função para remover a mensagem do ECHO depois de alguns segundos
-       function removeMensagem(){
-            setTimeout(function(){ 
-            var msg = document.getElementById("cadastradoSucesso");
-            msg.parentNode.removeChild(msg);   
-        }, 5000);
-    }
-        document.onreadystatechange = () => {
-            if (document.readyState === 'complete') {
-                // toda vez que a página carregar, vai limpar a mensagem (se houver) 
-                // após 5 segundos
-            removeMensagem(); 
-        }
-    };
     </script>
   <body>
     <a href = "../HTML/menu.html"><img src="../IMAGENS/logo.png" width="100" height="50"></a>
@@ -160,11 +146,11 @@ require "../PHP/funcoesFornecedor.php";
 
                     if (empty($nomeFornecedor) || empty($emailFornecedor) || empty($celularFornecedor) || empty($enderecoFornecedor) || empty($numeroFornecedor) || empty($cepFornecedor) || empty($cnpjFornecedor) || empty($cidadeFornecedor) || empty($estadoFornecedor)){
                         echo "<strong id = 'alert'>Campos obrigatórios vazios, favor preencher</strong>";
-                    }else if(verificaEntradaInt($celularUsuario) || verificaEntradaInt($numeroFornecedor) || verificaEntradaInt($cepFornecedor) || verificaEntradaInt($cnpjFornecedor)){
+                    }else if(verificaEntradaInt($celularFornecedor) || verificaEntradaInt($numeroFornecedor) || verificaEntradaInt($cepFornecedor) || verificaEntradaInt($cnpjFornecedor)){
                         echo "<strong id = 'alert'>Não alterar código fonte</strong>";    
                     }else if(verificaEntradaString($nomeFornecedor) || verificaEntradaString($emailFornecedor) || verificaEntradaString($enderecoFornecedor) ||verificaEntradaString($cidadeFornecedor) ||verificaEntradaString($estadoFornecedor)){
                         echo "<strong id = 'alert'>Não alterar código fonte</strong>";                    
-                    }else if (strlen($nomeFornecedor) < 6 || strlen($emailFornecedor) < 10|| strlen($celularFornecedor) < 11|| strlen($enderecoFornecedor) < 8 || strlen($numeroFornecedor) < 1 || strlen($cepFornecedor) < 8 || strlen($cnpjFornecedor) < 14|| strlen($cidadeFornecedor) < 5|| strlen($estadoFornecedor) < 2){
+                    }else if (strlen($nomeFornecedor) < 6 || strlen($emailFornecedor) < 10|| strlen($celularFornecedor) < 11|| strlen($enderecoFornecedor) < 8 || strlen($cnpjFornecedor) < 14 || strlen($cepFornecedor) < 8){
                         echo "<strong id = 'alert'>Algum campo apresenta tamanho inválido</strong>";
                     }else if($nomeFornecedor == $emailFornecedor || $nomeFornecedor == $enderecoFornecedor || $nomeFornecedor == $cidadeFornecedor || $cepFornecedor == $cnpjFornecedor || $cidadeFornecedor == $enderecoFornecedor || $enderecoFornecedor == $numeroFornecedor){
                         echo "<strong id = 'alert'>Alguns campos estão repetidos, tente novamente</strong>";

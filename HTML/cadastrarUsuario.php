@@ -11,20 +11,20 @@ require "../PHP/funcoesUsuario.php";
     <link rel = "stylesheet" type = "text/css" href = "../CSS/cadastrarUsuario.css">
     <script src = "../JQuery/jquery-3.4.1.min.js" ></script>
     <script src = "../JQuery/jquery.mask.js" ></script>
-    <script>
+    <script type="text/javascript">
         $(document).ready(function(){
             $('#telefone_usuario').mask('(00) 0000-0000');
     })
         $(document).ready(function(){
            $('#celular_usuario').mask('(00) 00000-0000');
     })
-    </script>
-    <script type="text/javascript">
     //Função para remover a mensagem do ECHO depois de alguns segundos
         function removeMensagem(){
             setTimeout(function(){ 
             var msg = document.getElementById("alert");
-            msg.parentNode.removeChild(msg);   
+            var msg2 = document.getElementById("cadastradoSucesso");
+            msg.parentNode.removeChild(msg);
+            msg2.parentNode.removeChild(msg2);   
         }, 5000);
     }
         document.onreadystatechange = () => {
@@ -35,20 +35,6 @@ require "../PHP/funcoesUsuario.php";
         }
     };
 
-         //Função para remover a mensagem do ECHO depois de alguns segundos
-         function removeMensagem(){
-            setTimeout(function(){ 
-            var msg = document.getElementById("cadastradoSucesso");
-            msg.parentNode.removeChild(msg);   
-        }, 5000);
-    }
-        document.onreadystatechange = () => {
-            if (document.readyState === 'complete') {
-                // toda vez que a página carregar, vai limpar a mensagem (se houver) 
-                // após 5 segundos
-            removeMensagem(); 
-        }
-    };
     </script>
   </head>
   <body>
@@ -129,6 +115,9 @@ require "../PHP/funcoesUsuario.php";
                             echo "<strong id = 'cadastradoSucesso'>Usuário cadastrado com sucesso!</strong>";
                             $sql = "insert into usuario(nome, senha, telefone, celular, email, cargo) values ('$nomeUsuario', '$criptografado', '$telefoneUsuario', '$celularUsuario',
                             '$emailUsuario', '$cargoUsuario')";
+                            //$mensagem = "E-mail de acesso: $emailUsuario\n";
+                            //$mensagem .= "Senha de acesso: $senhaUsuario";
+                            //mail("lucas.kurata@hotmail.com", "Dados para entrar no sistema", $mensagem);
                             $result = mysqli_query($con, $sql);
                         }
                     }
