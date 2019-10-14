@@ -55,7 +55,7 @@ while ($registro = mysqli_fetch_array($result)){
     <td><?php echo $registro['fornecedor']; ?></td>
     <td><?php echo $registro['categoria_produto']; ?></td>
     <td><?php echo $registro['cor']; ?></td>
-    <td><a href = "">Excluir</a></td>
+    <td><a href = "deletarProduto.php?id=<?php echo $registro['codProduto'] ?>">Excluir</a></td>
     <td><a href = "editarProduto.php?id=<?php echo $registro['codProduto'] ?>">Editar</a></td>
   </tr>
     <?php } ?>
