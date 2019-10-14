@@ -80,7 +80,7 @@ while ($registro = mysqli_fetch_array($result)){
 		    <label for = "fornecedor">Fornecedor: </label>
 			<input type = "text" id = "fornecedor"  maxlength="30" name = "fornecedor" placeholder = "(Opcional)" pattern= "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" title = "Campo opcional" value = "<?php echo $registro['fornecedor']; ?>">
             <label for = "categoria">*Categoria: </label>
-            <select name="categoria_produto" required value = "<?php echo $registro['categoria_produto']; ?>">
+            <select name="categoria_produto" required value = "<?php echo $registro['categoria_produto'];?>">
                 <option value = "Botas">Botas</option>
                 <option value = "Chinelos">Chinelos</option>
                 <option value = "Sandálias">Sandálias</option>
@@ -162,16 +162,18 @@ while ($registro = mysqli_fetch_array($result)){
                             quantidade = '$quantidadeProduto', 
                             valor_custo = '$valorCusto', 
                             valor_venda = '$valorVenda', 
-                            fornecedor = '$fornecedorProduto',
-	                        categoria_produto = '$categoriaProduto', 
-                            cor = '$corProduto'
+                            fornecedor = '$fornecedorProduto'
                             WHERE codProduto = '$idp'";
                     $result = mysqli_query($con, $sql);
-                    }
+                    echo '<script>setTimeout(function() {
+                        window.location.href = "consultandoProduto.php";
+                    }, 1000);</script>';
+                    
                 }
-
+            }
             
-        ?>
+            
+            ?>
     </fieldset>
     
 	<hr/>

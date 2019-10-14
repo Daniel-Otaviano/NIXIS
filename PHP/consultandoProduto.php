@@ -46,7 +46,6 @@ while ($registro = mysqli_fetch_array($result)){
 
 <tr>
     <td><?php echo $registro['codProduto']; ?></td>
-    <?php $id = $registro['codProduto']; ?>
     <td><?php echo $registro['nome_produto']; ?></td>
     <td><?php echo $registro['marca']; ?></td>
     <td><?php echo $registro['numeracao']; ?></td>
