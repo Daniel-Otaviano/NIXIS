@@ -46,10 +46,16 @@ input:focus, textarea:focus {
     /* Dar um pouco de destaque nos elementos ativos */
     border-color: #000;
     }
+
+input:hover{
+    background-color: rgb(230, 228, 228);
+    cursor:pointer;
+}
+
 .button {
     /* Para posicionar os botões para a mesma posição dos campos de texto */
     padding-left: 483px; /* mesmo tamanho que os elementos do tipo label */
-	}
+}
 button {
     /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
     margin-left: .5em;
