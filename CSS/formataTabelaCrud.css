@@ -1,0 +1,125 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+a{
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    background-color: royalblue;
+    border: solid 1px black;
+    padding: 1px 7px;
+    margin-right: 1px;
+    border-radius: 3px;
+    border-color: royalblue;
+}
+
+#excluir a{
+  text-align: right;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(45, 173, 45);
+  border: solid 1px black;
+  padding: 2px 9px;
+  margin-right: 1px;
+  border-radius: 3px;
+  border-color:  rgb(45, 173, 45);
+}
+
+#excluir a:hover{
+  border-color:  rgb(174, 255, 174);
+}
+
+#editar a{
+  text-align: right;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(221, 43, 43);
+  border: solid 1px; 
+  padding: 2px 9px;
+  margin-right: 1px;
+  border-radius: 3px;
+  border-color: rgb(221, 43, 43);
+}
+
+#editar a:hover{
+  border-color: rgb(255, 168, 168); 
+}
+
+h1{
+  color: #666;
+  font-size: 40px;
+}
+
+th{
+    color: darkcyan;
+    font-size: 15px;
+    padding-left:4px;
+    padding-right:4px;
+    border-bottom:solid 2px #CCC;
+    height:36px;
+    padding-right:5px;
+}
+
+tr:nth-child(odd) {
+		background-color:#F3F3F3;
+}
+
+tr:nth-child(even) {
+		background-color:#FFF;
+
+}
+
+tr, td {
+    height:26px;
+    padding-left:4px;
+    padding-right:2px;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:12px;
+    white-space:nowrap;
+    border-bottom:solid 1px #E1E1E1;
+    text-align: center;
+    }
+
+tr:hover {
+    background-color: rgb(196, 196, 196);
+    cursor:pointer; color black;
+}
+
+.navbaresquerda{
+  text-align: center;
+  color: white;
+  border 1px solid;
+  padding: 4px 7px;
+  border-color:  rgb(255, 153, 51);
+  background-color:rgb(255, 153, 51);
+}
+
+#navbar {
+  text-align: right;
+}
+
+#navbar a{
+  text-decoration: none;
+  font: 20px Arial, Verdana, Helvetica;
+  text-align: right;
+  padding: 1px 7px;
+  margin-right: 1px;
+  border: 1px solid #A1A1A1;
+  border-radius: 5px;
+  background-color: rgb(68, 167, 180);
+  color: white;
+  border-color:  rgb(68, 167, 180);
+}
+
+#navbar a:hover{
+  
+  border: 1px solid #666;
+  border-color: cyan;
+}
+
