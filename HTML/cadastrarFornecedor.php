@@ -2,6 +2,17 @@
 require_once "../PHP/conexao.php";
 require "../PHP/funcoesFornecedor.php"; 
 
+session_start();
+if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == true)){
+  unset($_SESSION['email']);
+  unset($_SESSION['password']);
+  header("location: login.php");
+  
+}
+
+$logado = $_SESSION['email'];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -50,8 +61,8 @@ require "../PHP/funcoesFornecedor.php";
   
     <div id = "navbar">
         <a href = "../PHP/consultandoFornecedor.php">Consultar Fornecedores</a>
-        <a href="../HTML/menu.html">Voltar para Menu</a>
-        <a href="../HTML/index.html">Sair do sistema</a>
+        <a href="../HTML/menu.php">Voltar para Menu</a>
+        <a href="../HTML/logout.php">Sair do sistema</a>
     </div>
 
   <hr/>

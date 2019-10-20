@@ -1,4 +1,14 @@
 <?php
+session_start();
+if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == true)){
+  unset($_SESSION['email']);
+  unset($_SESSION['password']);
+  header("location: login.php");
+  
+}
+
+$logado = $_SESSION['email'];
+
 require_once "../PHP/conexao.php";
 require "../PHP/funcoesUsuario.php";
 ?>
@@ -41,8 +51,8 @@ require "../PHP/funcoesUsuario.php";
   <a href = "../HTML/menu.html"><img src="../IMAGENS/logo.png" width="100" height="50"></a>
   <div id = "navbar">
     <a href = "../PHP/consultandoUsuario.php">Consultar Usuários</a>
-    <a href="../HTML/menu.html">Voltar para Menu</a>
-    <a href="../HTML/index.html">Sair do sistema</a>
+    <a href="../HTML/menu.php">Voltar para Menu</a>
+    <a href="../HTML/logout.php">Sair do sistema</a>
   </div>
   
   <hr/>
@@ -103,7 +113,7 @@ require "../PHP/funcoesUsuario.php";
                         echo "<strong id = 'alert'>Não alterar código fonte</strong>";    
                     }else if(verificaEntradaString($nomeUsuario) || verificaEntradaString($emailUsuario) || verificaEntradaString($cargoUsuario)){
                         echo "<strong id = 'alert'>Não alterar código fonte</strong>";                    
-                    }else if (strlen($nomeUsuario) < 6 || strlen($senhaUsuario) <= 5|| strlen($celularUsuario) < 11 || strlen($emailUsuario) <= 10 || strlen($cargoUsuario) < 4){
+                    }else if (strlen($nomeUsuario) < 6 || strlen($senhaUsuario) <= 4|| strlen($celularUsuario) < 11 || strlen($emailUsuario) <= 10 || strlen($cargoUsuario) < 4){
                         echo "<strong id = 'alert'>Algum campo apresenta tamanho inválido</strong>";
                     }else if(strtolower($senhaUsuario) == "senha123" || strtolower($senhaUsuario) == "abc123" || strtolower($senhaUsuario) == "senha" || strtolower($senhaUsuario) == "pekeri" || strtolower($senhaUsuario) == "pekericalcados" || strtolower($senhaUsuario) == "pekeri_calçados" || strtolower($senhaUsuario) == "senha2019" || strtolower($senhaUsuario) == "teste" || strtolower($senhaUsuario) == "teste123"){
                         echo "<strong id = 'alert'>Senha inválida, tente novamente</strong>";

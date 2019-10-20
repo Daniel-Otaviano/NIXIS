@@ -1,4 +1,14 @@
 <?php
+session_start();
+if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == true)){
+  unset($_SESSION['email']);
+  unset($_SESSION['password']);
+  header("location: ../HTML/login.php");
+  
+}
+
+$logado = $_SESSION['email'];
+
 require_once "../PHP/conexao.php";
 require "../PHP/funcoesUsuario.php";
 $id = $_GET["id"];
@@ -116,7 +126,7 @@ while ($registro = mysqli_fetch_array($result)){
                           $sql = "UPDATE usuario 
                                   SET
                                   nome = '$nomeUsuario',
-                                  senha = '$senhaUsuario',
+                                  senha = '$criptografado',
                                   telefone = '$telefoneUsuario',
                                   celular = '$celularUsuario',
                                   email = '$emailUsuario',

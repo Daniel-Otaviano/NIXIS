@@ -1,4 +1,13 @@
 <?php
+session_start();
+if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == true)){
+  unset($_SESSION['email']);
+  unset($_SESSION['password']);
+  header("location: ../HTML/login.php");
+  
+}
+
+$logado = $_SESSION['email'];
 
 // Conectando
 require "conexao.php";
@@ -11,8 +20,8 @@ require "conexao.php";
 <body>
 <h1>Consultar Fornecedores</h1>
 <div id = "navbar">
-  <a href="../HTML/menu.html">Voltar para Menu</a>
-  <a href="../HTML/index.html">Sair do sistema</a>
+  <a href="../HTML/menu.php">Voltar para Menu</a>
+  <a href="../HTML/logout.php">Sair do sistema</a>
 </div>
 <a class = "navbaresquerda" href= "../HTML/cadastrarFornecedor.php">Novo Fornecedor</a>
 
