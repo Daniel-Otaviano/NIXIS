@@ -8,6 +8,7 @@ require_once "../PHP/conexao.php";
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="sortcut icon" href="../IMAGENS/logo2.png" type="image/png" />
     <title>Login</title>
     <meta charset="utf-8">
     <link rel = "stylesheet" type = "text/css" href = "../CSS/login.css">

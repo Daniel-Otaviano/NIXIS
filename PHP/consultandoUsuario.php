@@ -14,6 +14,7 @@ require "conexao.php";
 ?>
 <html>
  <head>
+ <link rel="sortcut icon" href="../IMAGENS/logo2.png" type="image/png" />
  <link href="../CSS/formataTabelaCrud.css" rel="stylesheet" type="text/css">
  <title>Consultando Usuários</title>
 </head>

@@ -14,7 +14,7 @@ $logado = $_SESSION['email'];
 <html lang="pt-br">
 
 <head>
-
+  <link rel="sortcut icon" href="../IMAGENS/logo2.png" type="image/png" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -39,22 +39,23 @@ $logado = $_SESSION['email'];
       <!--<div class="sidebar-heading"><img src="img/logo.png" />  </div>-->
       <img class="logo" src="../IMAGENS/logo.png" />
       <div class="list-group list-group-flush">
-        <a href="../HTML/cadastrarUsuario.php" class="list-group-item list-group-item-action bg-light">Cadastrar Usuario</a>
-        <a href = "../HTML/cadastrarFornecedor.php"  class="list-group-item list-group-item-action bg-light">Cadastrar Fornecedor</a>
-        <a href = "../HTML/cadastrarProduto.php" class="list-group-item list-group-item-action bg-light">Cadastrar Produtos</a>
+    <a href="../HTML/cadastrarUsuario.php" class="list-group-item list-group-item-action bg-light">Cadastrar Usuario</a>
+    <a href = "../HTML/cadastrarFornecedor.php"  class="list-group-item list-group-item-action bg-light">Cadastrar Fornecedor</a>
+    <a href = "../HTML/cadastrarProduto.php" class="list-group-item list-group-item-action bg-light">Cadastrar Produtos</a>
         <a href = "../PHP/consultandoUsuario.php" class="list-group-item list-group-item-action bg-light">Consultar Usuários</a>
         <a href = "../PHP/consultandoFornecedor.php" class="list-group-item list-group-item-action bg-light">Consultar Fornecedores</a>
         <a href = "../PHP/consultandoProduto.php" class="list-group-item list-group-item-action bg-light">Consultar Produtos</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
-
+    
+    
     <!-- Page Content -->
     <div id="page-content-wrapper">
-
+      
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <button class="btn btn-primary" id="menu-toggle">Expandir</button>
-
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -63,10 +64,10 @@ $logado = $_SESSION['email'];
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
               
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../HTML/logout.php">Sair</a>
-            </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../HTML/logout.php">Sair</a>
+              </li>
             <!--<li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
@@ -81,13 +82,13 @@ $logado = $_SESSION['email'];
           </ul>
         </div>
       </nav>
-
+      </div>
       
     <!-- /#page-content-wrapper -->
-
+    
   </div>
   <!-- /#wrapper -->
-
+  
   <!-- Bootstrap core JavaScript -->
   <script src="../left-bar/vendor/jquery/jquery.min.js"></script>
   <script src="../left-bar/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

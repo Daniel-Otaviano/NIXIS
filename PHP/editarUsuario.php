@@ -23,6 +23,7 @@ while ($registro = mysqli_fetch_array($result)){
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="sortcut icon" href="../IMAGENS/logo2.png" type="image/png" />
     <title>Atualizar Usuário</title>
     <meta charset="utf-8">
     <link rel = "stylesheet" type = "text/css" href = "../CSS/cadastrarUsuario.css">
@@ -101,13 +102,13 @@ while ($registro = mysqli_fetch_array($result)){
                 <?php
                 if(isset($_POST['enviar'])){
                     $idp = $_POST['crud'];
-                    $nomeUsuario = $_POST['nome_usuario'];
+                    $nomeUsuario = ucwords($_POST['nome_usuario']);
                     $senhaUsuario = $_POST['senha_usuario'];
                     $criptografado = base64_encode($senhaUsuario);
                     $telefoneUsuario = $_POST['telefone_usuario'];
                     $celularUsuario = $_POST['celular_usuario'];
                     $emailUsuario = $_POST['email_usuario'];
-                    $cargoUsuario = $_POST['cargo'];
+                    $cargoUsuario = ucwords($_POST['cargo']);
                    
                     eliminaMascaraInt($telefoneUsuario);
                     eliminaMascaraInt($celularUsuario);

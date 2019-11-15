@@ -22,6 +22,7 @@ $logado = $_SESSION['email'];
     <meta charset="utf-8">
     <link rel = "stylesheet" type = "text/css" href = "../CSS/cadastrarFornecedor.css">
   </head>
+  <link rel="sortcut icon" href="../IMAGENS/logo2.png" type="image/png" />
   <script src = "../JQuery/jquery-3.4.1.min.js" ></script>
   <script src = "../JQuery/jquery.mask.js" ></script>
   <script type="text/javascript">
@@ -139,16 +140,16 @@ $logado = $_SESSION['email'];
     
             <?php
                 if(isset($_POST['enviar'])){
-                    $nomeFornecedor = $_POST['nome_fantasia'];
+                    $nomeFornecedor = ucwords($_POST['nome_fantasia']);
                     $emailFornecedor = $_POST['email_fornecedor'];
                     $telefoneFornecedor = $_POST['telefone_fornecedor'];
                     $celularFornecedor = $_POST['celular_fornecedor'];
-                    $enderecoFornecedor = $_POST['endereco_fornecedor'];
+                    $enderecoFornecedor = ucwords($_POST['endereco_fornecedor']);
                     $numeroFornecedor = $_POST['numero_fornecedor'];
                     $cepFornecedor = $_POST['cep_fornecedor'];
                     $cnpjFornecedor = $_POST['cnpj_fornecedor'];
-                    $cidadeFornecedor = $_POST['cidade_fornecedor'];
-                    $estadoFornecedor = $_POST['estado_fornecedor'];
+                    $cidadeFornecedor = ucwords($_POST['cidade_fornecedor']);
+                    $estadoFornecedor = ucwords($_POST['estado_fornecedor']);
                    
                     eliminaMascaraInt($telefoneFornecedor);
                     eliminaMascaraInt($celularFornecedor);

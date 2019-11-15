@@ -17,6 +17,7 @@ $logado = $_SESSION['email'];
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="sortcut icon" href="../IMAGENS/logo2.png" type="image/png" />
     <title>Cadastro de produto</title>
     <meta charset="utf-8">
     <link rel = "stylesheet" type = "text/css" href = "../CSS/cadastrarProduto.css">
@@ -130,15 +131,15 @@ $logado = $_SESSION['email'];
 
         <?php
              if(isset($_POST['enviar'])){
-                $nomeProduto = $_POST['nome_produto'];
-                $marcaProduto = strtolower($_POST['marca']);
-                $numeracaoProduto = strtolower($_POST['numeracao']);
-                $quantidadeProduto = $_POST['quantidade'];
-                $valorCusto = $_POST['valor_custo'];
-                $valorVenda = $_POST['valor_venda'];
-                $fornecedorProduto = $_POST['fornecedor'];
-                $categoriaProduto = $_POST['categoria_produto'];
-                $corProduto = $_POST['cor'];
+                $nomeProduto = ucwords($_POST['nome_produto']);
+                $marcaProduto = ucwords($_POST['marca']);
+                $numeracaoProduto = ucwords($_POST['numeracao']);
+                $quantidadeProduto = ucwords($_POST['quantidade']);
+                $valorCusto = ucwords($_POST['valor_custo']);
+                $valorVenda = ucwords($_POST['valor_venda']);
+                $fornecedorProduto = ucwords($_POST['fornecedor']);
+                $categoriaProduto = ucwords($_POST['categoria_produto']);
+                $corProduto = ucwords($_POST['cor']);
 
                
                 eliminaMascaraInt($valorCusto);
@@ -150,14 +151,14 @@ $logado = $_SESSION['email'];
 
                 if (empty($nomeProduto) || empty($marcaProduto) || empty($quantidadeProduto) || empty($valorCusto) || empty($valorVenda) || empty($categoriaProduto) || empty($corProduto)){
                     echo "<strong id = 'alert'>Campos obrigatórios vazios, favor preencher</strong>";
-                }else if(verificaEntradaInt($quantidadeProduto) || verificaEntradaInt($valorCusto) || verificaEntradaInt($valorVenda)){
+                }else if(verificaEntradaInt($quantidadeProduto) /*|| verificaEntradaInt($valorCusto) || verificaEntradaInt($valorVenda)*/){
                     echo "<strong id = 'alert'>Não alterar código fonte</strong>";    
                 }else if(verificaEntradaString($categoriaProduto) || verificaEntradaString($corProduto)){
                     echo "<strong id = 'alert'>Não alterar código fonte</strong>";                    
                 }else if ((strlen($nomeProduto) < 4|| strlen($marcaProduto) < 4|| strlen($quantidadeProduto) < 1|| strlen($valorCusto) < 3|| strlen($valorVenda) < 3 || strlen($categoriaProduto) < 4 || strlen($corProduto) < 4)){
                     echo "<strong id = 'alert'>Algum campo apresenta tamanho inválido</strong>";
-                //}else if($valorCusto == "0.00" || $valorCusto = "00.00" || $valorVenda == "0.00" || $valorVenda == "00.00" || strtolower($nomeProduto) == "nome" || strtolower($marcaProduto) == "marca" || strtolower($numeracaoProduto) == "numeracao"){
-                //    echo "<strong id = 'alert'>Favor preencher os campos corretamente</strong>";
+                //}else if($valorCusto == 0.00 || $valorCusto = 00.00 || $valorVenda == 0.00 || $valorVenda == 00.00 || strtolower($nomeProduto) == "nome" || strtolower($marcaProduto) == "marca" || strtolower($numeracaoProduto) == "numeracao"){
+                //    echo "<strong id = 'alert'>Valores inválidos, tente novamente</strong>";
                 }else if(strtolower($nomeProduto) == strtolower($numeracaoProduto) || strtolower($nomeProduto) == strtolower($marcaProduto) || strtolower($nomeProduto) == strtolower($quantidadeProduto) || $valorCusto == $valorVenda ||  strtolower($nomeProduto) == strtolower($corProduto) || strtolower($marcaProduto) == strtolower($corProduto)){
                     echo "<strong id = 'alert'>Alguns campos estão repetidos, tente novamente</strong>";
                 }else{
