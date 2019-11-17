@@ -26,7 +26,7 @@ require "conexao.php";
       <li><a href= "../HTML/cadastrarUsuario.php">Cadastrar Usuários</a></li>
       <li><a href= "../PHP/consultandoFornecedor.php">Consultar Fornecedores</a></li>
       <li><a href= "../HTML/cadastrarFornecedor.php">Cadastrar Fornecedores</a></li>
-      <li><a href="../HTML/logout.php">Sair do sistema</a></li>
+      <li ><a href="../HTML/logout.php">Sair do sistema</a></li>
     </ul>
   </div>
   <br>
