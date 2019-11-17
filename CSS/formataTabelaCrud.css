@@ -83,10 +83,16 @@ tr:hover {
 .navbaresquerda{
   text-align: center;
   color: white;
+  text-decoration: none;
   border 1px solid;
   padding: 4px 7px;
   border-color:  rgb(255, 153, 51);
   background-color:rgb(255, 153, 51);
+}
+
+.navbaresquerda:hover{
+  border: 2px solid;
+  border-color: rgb(252, 225, 198);
 }
 
 #navbar {
