@@ -55,7 +55,7 @@ $logado = $_SESSION['email'];
     <a href = "../HTML/menu.html"><img src="../IMAGENS/logo.png" width="100" height="50"></a>
     <div id = "navbar">
         <a href = "../PHP/consultandoProduto.php">Consultar Produtos</a>
-        <a href="../HTML/menu.php">Voltar para Menu</a>
+        <a href="../PHP/consultandoProduto.php">Voltar para Início</a>
         <a href="../HTML/logout.php">Sair do sistema</a>
     </div>
   

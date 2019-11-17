@@ -62,7 +62,7 @@ $logado = $_SESSION['email'];
   
     <div id = "navbar">
         <a href = "../PHP/consultandoFornecedor.php">Consultar Fornecedores</a>
-        <a href="../HTML/menu.php">Voltar para Menu</a>
+        <a href="../PHP/consultandoProduto.php">Voltar para Início</a>
         <a href="../HTML/logout.php">Sair do sistema</a>
     </div>
 

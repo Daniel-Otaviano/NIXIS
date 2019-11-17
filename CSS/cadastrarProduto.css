@@ -134,3 +134,29 @@ input:invalid {
     color: green;
     font-size: 20px;
 }
+
+#menu ul{
+  margin: -8px;
+  list-style: none;
+  background-color: rgb(68, 167, 180);
+}
+
+#menu ul li{
+  display: inline;
+}
+
+#menu ul li a{
+  text-decoration: none;
+  padding: 20px 10px;
+  display: inline-block;
+  color: white;
+  font-size: 22px;
+}
+
+#menu ul li a:hover{
+  color: rgb(77, 75, 75);
+}
+
+#menu ul li a:focus{
+  color: rgb(75, 2, 2);
+}

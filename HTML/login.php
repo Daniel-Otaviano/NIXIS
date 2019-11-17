@@ -15,7 +15,7 @@ require_once "../PHP/conexao.php";
 
     <script type="text/javascript">
       function loginsucessfully(){
-		    setTimeout("window.location='../HTML/menu.php'", 900);
+		    setTimeout("window.location='../PHP/consultandoProduto.php'", 900);
 		    alert("Logado com Sucesso!");
 	    }
       //Função para remover a mensagem do ECHO depois de alguns segundos

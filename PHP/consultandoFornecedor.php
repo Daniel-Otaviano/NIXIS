@@ -19,13 +19,21 @@ require "conexao.php";
  <title>Consultando fornecedores</title>
 </head>
 <body>
-<h1>Consultar Fornecedores</h1>
-<div id = "navbar">
-  <a href="../HTML/menu.php">Voltar para Menu</a>
-  <a href="../HTML/logout.php">Sair do sistema</a>
-</div>
-<a class = "navbaresquerda" href= "../HTML/cadastrarFornecedor.php">Novo Fornecedor</a>
-
+<div id = "menu">
+    <ul>
+      <li><a href= "../PHP/consultandoProduto.php">Consultar Produtos</a></li>
+      <li><a href= "../HTML/cadastrarProduto.php">Cadastrar Produtos</a></li>
+      <li><a href= "../PHP/consultandoUsuario.php">Consultar Usuários</a></li>
+      <li><a href= "../HTML/cadastrarUsuario.php">Cadastrar Usuários</a></li>
+      <li><a href= "../HTML/cadastrarFornecedor.php">Cadastrar Fornecedores</a></li>
+      <li><a href="../HTML/logout.php">Sair do sistema</a></li>
+    </ul>
+  </div>
+  <br>
+  <br>
+  <a class = "navbaresquerda" href= "../HTML/cadastrarFornecedor.php">Novo Fornecedor</a>
+  <br>
+  <br>
  <hr/>
  <form action = "editarFornecedor.php" method = "get">
  <table>

@@ -19,13 +19,21 @@ require "conexao.php";
  <title>Consultando Usuários</title>
 </head>
 <body>
-<h1>Consultar Usuários</h1>
-<div id = "navbar">
-  <a href="../HTML/menu.php">Voltar para Menu</a>
-  <a href="../HTML/logout.php">Sair do sistema</a>
-</div>
-<a class = "navbaresquerda" href= "../HTML/cadastrarUsuario.php">Novo Usuário</a>
-
+  <div id = "menu">
+    <ul>
+      <li><a href = "../PHP/consultandoProduto.php">Consultar Produtos</a></li>
+      <li><a href= "../HTML/cadastrarProduto.php">Cadastrar Produtos</a></li>
+      <li><a href= "../HTML/cadastrarUsuario.php">Cadastrar Usuários</a></li>
+      <li><a href= "../PHP/consultandoFornecedor.php">Consultar Fornecedores</a></li>
+      <li><a href= "../HTML/cadastrarFornecedor.php">Cadastrar Fornecedores</a></li>
+      <li><a href="../HTML/logout.php">Sair do sistema</a></li>
+    </ul>
+  </div>
+  <br>
+  <br>
+  <a class = "navbaresquerda" href= "../HTML/cadastrarUsuario.php">Novo Usuário</a>
+  <br>
+  <br>
  <hr/>
  <form action = "editarUsuario.php" method = "get">
  <table>

@@ -7,17 +7,6 @@ body{
     background-color: rgb(235, 235, 235);
 }
 
-a{
-    text-align: right;
-    text-decoration: none;
-    color: white;
-    background-color: royalblue;
-    border: solid 1px black;
-    padding: 1px 7px;
-    margin-right: 1px;
-    border-radius: 3px;
-    border-color: royalblue;
-}
 
 #excluir a{
   text-align: right;
@@ -57,7 +46,7 @@ h1{
 }
 
 th{
-    color: darkcyan;
+    color: rgb(61, 61, 61);
     font-size: 15px;
     padding-left:4px;
     padding-right:4px;
@@ -118,8 +107,33 @@ tr:hover {
 }
 
 #navbar a:hover{
-  
   border: 1px solid #666;
   border-color: cyan;
+}
+
+#menu ul{
+  margin: -8px;
+  list-style: none;
+  background-color: rgb(116, 116, 116);
+}
+
+#menu ul li{
+  display: inline;
+}
+
+#menu ul li a{
+  text-decoration: none;
+  padding: 20px 20px;
+  display: inline-block;
+  color: white;
+  font-size: 21px;
+}
+
+#menu ul li a:hover{
+  color: rgb(77, 75, 75);
+}
+
+#menu ul li a:focus{
+  color: rgb(75, 2, 2);
 }
 
