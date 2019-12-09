@@ -4,7 +4,7 @@ if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == 
   unset($_SESSION['email']);
   unset($_SESSION['password']);
   header("location: ../HTML/login.php");
-  
+
 }
 
 $logado = $_SESSION['email'];
@@ -42,7 +42,7 @@ require "conexao.php";
       <th>ID</th>
       <th>Nome</th>
       <th>Marca</th>
-      <th>Numeracao</th>
+      <th>Numeração</th>
       <th>Quantidade</th>
       <th>Valor custo</th>
       <th>Valor venda</th>
@@ -57,17 +57,17 @@ require "conexao.php";
 <?php
 
 // Executando consulta SQL
-$query = 'SELECT 
-          codProduto, 
-          nome_produto, 
-          marca, 
-          numeracao, 
-          quantidade, 
-          CONCAT("R$ ", valor_custo) AS valor_custo, 
-          CONCAT("R$ ", valor_venda) AS valor_venda, 
-          fornecedor, 
-          categoria_produto, 
-          cor 
+$query = 'SELECT
+          codProduto,
+          nome_produto,
+          marca,
+          numeracao,
+          quantidade,
+          CONCAT("R$ ", valor_custo) AS valor_custo,
+          CONCAT("R$ ", valor_venda) AS valor_venda,
+          fornecedor,
+          categoria_produto,
+          cor
           FROM produtos
           ORDER BY codProduto';
 $result = mysqli_query($con, $query) or die('Query failed: ' . mysql_error());
@@ -76,7 +76,7 @@ $result = mysqli_query($con, $query) or die('Query failed: ' . mysql_error());
 
 
 while ($registro = mysqli_fetch_array($result)){
- 
+
  ?>
 
 <tr>
@@ -91,7 +91,7 @@ while ($registro = mysqli_fetch_array($result)){
     <td><?php echo $registro['categoria_produto']; ?></td>
     <td><?php echo $registro['cor']; ?></td>
     <td id = "excluir"><a href = "editarProduto.php?id=<?php echo $registro['codProduto'] ?>">Alterar</a></td>
-    <td id = "editar"><a href="deletarProduto.php?id=<?php echo $registro['codProduto'] ?>" 
+    <td id = "editar"><a href="deletarProduto.php?id=<?php echo $registro['codProduto'] ?>"
     onclick="return confirm('Tem certeza que deseja excluir este registro?')">Excluir</a></td>
   </tr>
     <?php } ?>

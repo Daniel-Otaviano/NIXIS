@@ -7,7 +7,7 @@ if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == 
   unset($_SESSION['email']);
   unset($_SESSION['password']);
   header("location: login.php");
-  
+
 }
 
 $logado = $_SESSION['email'];
@@ -30,35 +30,35 @@ $logado = $_SESSION['email'];
         $(document).ready(function(){
            $('#valor_venda').mask('0000.00', {reverse: true});
     })
-    
+
     //Função para remover a mensagem do ECHO depois de alguns segundos
     function removeMensagem(){
-            setTimeout(function(){ 
+            setTimeout(function(){
             var msg = document.getElementById("alert");
             var msg2 = document.getElementById("cadastradoSucesso");
             msg.parentNode.removeChild(msg);
-            msg2.parentNode.removeChild(msg2);   
+            msg2.parentNode.removeChild(msg2);
         }, 5000);
     }
         document.onreadystatechange = () => {
             if (document.readyState === 'complete') {
-                // toda vez que a página carregar, vai limpar a mensagem (se houver) 
+                // toda vez que a página carregar, vai limpar a mensagem (se houver)
                 // após 5 segundos
-            removeMensagem(); 
+            removeMensagem();
         }
     };
 
     </script>
   </head>
   <body>
-    
+
     <a href = "../HTML/menu.html"><img src="../IMAGENS/logo.png" width="100" height="50"></a>
     <div id = "navbar">
         <a href = "../PHP/consultandoProduto.php">Consultar Produtos</a>
         <a href="../PHP/consultandoProduto.php">Voltar para Início</a>
         <a href="../HTML/logout.php">Sair do sistema</a>
     </div>
-  
+
   <hr/>
   <fieldset>
         <h1 id = "centro">Cadastrar produto</h1>
@@ -97,7 +97,6 @@ $logado = $_SESSION['email'];
                 <option value = "Sapatenis">Sapatenis</option>
                 <option value = "Tênis">Tênis</option>
                 <option value = "Performance">Tênis Performance</option>
-                <option value = "Sandálias">Sandálias</option>
                 <option value = "Sapatilhas">Sapatilhas</option>
                 <option value = "Cinto">Cinto</option>
                 <option value = "Meia">Meia</option>
@@ -105,7 +104,7 @@ $logado = $_SESSION['email'];
                 <option value = "Caneleira">Caneleira</option>
                 <option value = "Bola">Bola</option>
                 <option value = "Calção">Calção</option>
-            </select> 
+            </select>
         </div>
         <div>
         <label for = "cor">*Cor: </label>
@@ -120,7 +119,7 @@ $logado = $_SESSION['email'];
                 <option value = "Amarelo">Amarelo</option>
                 <option value = "Cinza">Cinza</option>
                 <option value = "Marrom">Marrom</option>
-            </select> 
+            </select>
         </div>
         <br>
 			  <strong id = "obrigatorio">Os campos marcados com asterisco são de preenchimento obrigatório.</strong>
@@ -141,7 +140,7 @@ $logado = $_SESSION['email'];
                 $categoriaProduto = ucwords($_POST['categoria_produto']);
                 $corProduto = ucwords($_POST['cor']);
 
-               
+
                 eliminaMascaraInt($valorCusto);
                 eliminaMascaraInt($valorVenda);
                 eliminaMascaraInt($quantidadeProduto);
@@ -152,10 +151,10 @@ $logado = $_SESSION['email'];
                 if (empty($nomeProduto) || empty($marcaProduto) || empty($quantidadeProduto) || empty($valorCusto) || empty($valorVenda) || empty($categoriaProduto) || empty($corProduto)){
                     echo "<strong id = 'alert'>Campos obrigatórios vazios, favor preencher</strong>";
                 }else if(verificaEntradaInt($quantidadeProduto) /*|| verificaEntradaInt($valorCusto) || verificaEntradaInt($valorVenda)*/){
-                    echo "<strong id = 'alert'>Não alterar código fonte</strong>";    
+                    echo "<strong id = 'alert'>Não alterar código fonte</strong>";
                 }else if(verificaEntradaString($categoriaProduto) || verificaEntradaString($corProduto)){
-                    echo "<strong id = 'alert'>Não alterar código fonte</strong>";                    
-                }else if ((strlen($nomeProduto) < 4|| strlen($marcaProduto) < 4|| strlen($quantidadeProduto) < 1|| strlen($valorCusto) < 3|| strlen($valorVenda) < 3 || strlen($categoriaProduto) < 4 || strlen($corProduto) < 4)){
+                    echo "<strong id = 'alert'>Não alterar código fonte</strong>";
+                }else if ((strlen($nomeProduto) < 4|| strlen($marcaProduto) < 3|| strlen($quantidadeProduto) < 1|| strlen($valorCusto) < 3|| strlen($valorVenda) < 3 || strlen($categoriaProduto) < 4 || strlen($corProduto) < 4)){
                     echo "<strong id = 'alert'>Algum campo apresenta tamanho inválido</strong>";
                 //}else if($valorCusto == 0.00 || $valorCusto = 00.00 || $valorVenda == 0.00 || $valorVenda == 00.00 || strtolower($nomeProduto) == "nome" || strtolower($marcaProduto) == "marca" || strtolower($numeracaoProduto) == "numeracao"){
                 //    echo "<strong id = 'alert'>Valores inválidos, tente novamente</strong>";
@@ -173,10 +172,10 @@ $logado = $_SESSION['email'];
                     }
                 }
             }
-            
+
         ?>
     </fieldset>
-    
+
 	<hr/>
     <p class = "centralizar">Copyright © 2019 - Nixis Tecnologia</p>
   </body>

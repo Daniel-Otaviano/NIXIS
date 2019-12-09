@@ -4,7 +4,7 @@ if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == 
   unset($_SESSION['email']);
   unset($_SESSION['password']);
   header("location: ../HTML/login.php");
-  
+
 }
 
 $logado = $_SESSION['email'];
@@ -55,7 +55,7 @@ require "conexao.php";
 <?php
 
 // Executando consulta SQL
-$query = 'SELECT 
+$query = 'SELECT
         codUsuario,
         nome,
         /*senha,*/
@@ -71,7 +71,7 @@ $result = mysqli_query($con, $query) or die('Query failed: ' . mysql_error());
 
 
 while ($registro = mysqli_fetch_array($result)){
- 
+
  ?>
 
 <tr>
@@ -83,7 +83,7 @@ while ($registro = mysqli_fetch_array($result)){
     <td><?php echo $registro['email']; ?></td>
     <td><?php echo $registro['cargo']; ?></td>
     <td id = "excluir"><a href = "editarUsuario.php?id=<?php echo $registro['codUsuario'] ?>">Alterar</a></td>
-    <td id = "editar"><a href="deletarUsuario.php?id=<?php echo $registro['codUsuario'] ?>" 
+    <td id = "editar"><a href="deletarUsuario.php?id=<?php echo $registro['codUsuario'] ?>"
     onclick="return confirm('Tem certeza que deseja excluir este registro?')">Excluir</a></td>
     <!-- /*<td id = "excluir"><a href = "alterarSenhaUsuario.php?id=<?php echo $registro['codUsuario'] ?>">Alterar senha</a></td> -->
   </tr>

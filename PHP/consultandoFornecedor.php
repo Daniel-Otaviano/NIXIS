@@ -4,7 +4,7 @@ if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == 
   unset($_SESSION['email']);
   unset($_SESSION['password']);
   header("location: ../HTML/login.php");
-  
+
 }
 
 $logado = $_SESSION['email'];
@@ -41,7 +41,7 @@ require "conexao.php";
     <tr>
       <th>ID</th>
       <th>Nome</th>
-      <th>Email</th>
+      <th>E-mail</th>
       <th>Telefone</th>
       <th>Celular</th>
       <th>Endereço</th>
@@ -78,7 +78,7 @@ $result = mysqli_query($con, $query) or die('Query failed: ' . mysql_error());
 
 
 while ($registro = mysqli_fetch_array($result)){
- 
+
  ?>
 
 <tr>
@@ -94,7 +94,7 @@ while ($registro = mysqli_fetch_array($result)){
     <td><?php echo $registro['estadoFornecedor']; ?></td>
     <td><?php echo $registro['cidadeFornecedor']; ?></td>
     <td id = "excluir"><a href = "editarFornecedor.php?id=<?php echo $registro['codFornecedor'] ?>">Alterar</a></td>
-    <td id = "editar"><a href="deletarFornecedor.php?id=<?php echo $registro['codFornecedor'] ?>" 
+    <td id = "editar"><a href="deletarFornecedor.php?id=<?php echo $registro['codFornecedor'] ?>"
     onclick="return confirm('Tem certeza que deseja excluir este registro?')">Excluir</a></td>
   </tr>
     <?php } ?>
